@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		54525B091DF5EE37000FF036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B081DF5EE37000FF036 /* AppDelegate.swift */; };
+		54525B0B1DF5EE37000FF036 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B0A1DF5EE37000FF036 /* ViewController.swift */; };
+		54525B0E1DF5EE37000FF036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54525B0C1DF5EE37000FF036 /* Main.storyboard */; };
+		54525B111DF5EE37000FF036 /* OfficeHours.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54525B0F1DF5EE37000FF036 /* OfficeHours.xcdatamodeld */; };
+		54525B131DF5EE37000FF036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54525B121DF5EE37000FF036 /* Assets.xcassets */; };
+		54525B161DF5EE37000FF036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54525B141DF5EE37000FF036 /* LaunchScreen.storyboard */; };
+		54525B211DF5EE37000FF036 /* OfficeHoursTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B201DF5EE37000FF036 /* OfficeHoursTests.swift */; };
+		54525B2C1DF5EE37000FF036 /* OfficeHoursUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B2B1DF5EE37000FF036 /* OfficeHoursUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		54525B1D1DF5EE37000FF036 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54525AFD1DF5EE37000FF036 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54525B041DF5EE37000FF036;
+			remoteInfo = OfficeHours;
+		};
+		54525B281DF5EE37000FF036 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54525AFD1DF5EE37000FF036 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54525B041DF5EE37000FF036;
+			remoteInfo = OfficeHours;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		54525B051DF5EE37000FF036 /* OfficeHours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfficeHours.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54525B081DF5EE37000FF036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		54525B0A1DF5EE37000FF036 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		54525B0D1DF5EE37000FF036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		54525B101DF5EE37000FF036 /* OfficeHours.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OfficeHours.xcdatamodel; sourceTree = "<group>"; };
+		54525B121DF5EE37000FF036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		54525B151DF5EE37000FF036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		54525B171DF5EE37000FF036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54525B1C1DF5EE37000FF036 /* OfficeHoursTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfficeHoursTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54525B201DF5EE37000FF036 /* OfficeHoursTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeHoursTests.swift; sourceTree = "<group>"; };
+		54525B221DF5EE37000FF036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54525B271DF5EE37000FF036 /* OfficeHoursUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfficeHoursUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54525B2B1DF5EE37000FF036 /* OfficeHoursUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeHoursUITests.swift; sourceTree = "<group>"; };
+		54525B2D1DF5EE37000FF036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		54525B021DF5EE37000FF036 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54525B191DF5EE37000FF036 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54525B241DF5EE37000FF036 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54525AFC1DF5EE37000FF036 = {
+			isa = PBXGroup;
+			children = (
+				54525B071DF5EE37000FF036 /* OfficeHours */,
+				54525B1F1DF5EE37000FF036 /* OfficeHoursTests */,
+				54525B2A1DF5EE37000FF036 /* OfficeHoursUITests */,
+				54525B061DF5EE37000FF036 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		54525B061DF5EE37000FF036 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54525B051DF5EE37000FF036 /* OfficeHours.app */,
+				54525B1C1DF5EE37000FF036 /* OfficeHoursTests.xctest */,
+				54525B271DF5EE37000FF036 /* OfficeHoursUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54525B071DF5EE37000FF036 /* OfficeHours */ = {
+			isa = PBXGroup;
+			children = (
+				54525B081DF5EE37000FF036 /* AppDelegate.swift */,
+				54525B0A1DF5EE37000FF036 /* ViewController.swift */,
+				54525B0C1DF5EE37000FF036 /* Main.storyboard */,
+				54525B121DF5EE37000FF036 /* Assets.xcassets */,
+				54525B141DF5EE37000FF036 /* LaunchScreen.storyboard */,
+				54525B171DF5EE37000FF036 /* Info.plist */,
+				54525B0F1DF5EE37000FF036 /* OfficeHours.xcdatamodeld */,
+			);
+			path = OfficeHours;
+			sourceTree = "<group>";
+		};
+		54525B1F1DF5EE37000FF036 /* OfficeHoursTests */ = {
+			isa = PBXGroup;
+			children = (
+				54525B201DF5EE37000FF036 /* OfficeHoursTests.swift */,
+				54525B221DF5EE37000FF036 /* Info.plist */,
+			);
+			path = OfficeHoursTests;
+			sourceTree = "<group>";
+		};
+		54525B2A1DF5EE37000FF036 /* OfficeHoursUITests */ = {
+			isa = PBXGroup;
+			children = (
+				54525B2B1DF5EE37000FF036 /* OfficeHoursUITests.swift */,
+				54525B2D1DF5EE37000FF036 /* Info.plist */,
+			);
+			path = OfficeHoursUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		54525B041DF5EE37000FF036 /* OfficeHours */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54525B301DF5EE37000FF036 /* Build configuration list for PBXNativeTarget "OfficeHours" */;
+			buildPhases = (
+				54525B011DF5EE37000FF036 /* Sources */,
+				54525B021DF5EE37000FF036 /* Frameworks */,
+				54525B031DF5EE37000FF036 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OfficeHours;
+			productName = OfficeHours;
+			productReference = 54525B051DF5EE37000FF036 /* OfficeHours.app */;
+			productType = "com.apple.product-type.application";
+		};
+		54525B1B1DF5EE37000FF036 /* OfficeHoursTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54525B331DF5EE37000FF036 /* Build configuration list for PBXNativeTarget "OfficeHoursTests" */;
+			buildPhases = (
+				54525B181DF5EE37000FF036 /* Sources */,
+				54525B191DF5EE37000FF036 /* Frameworks */,
+				54525B1A1DF5EE37000FF036 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54525B1E1DF5EE37000FF036 /* PBXTargetDependency */,
+			);
+			name = OfficeHoursTests;
+			productName = OfficeHoursTests;
+			productReference = 54525B1C1DF5EE37000FF036 /* OfficeHoursTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		54525B261DF5EE37000FF036 /* OfficeHoursUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54525B361DF5EE37000FF036 /* Build configuration list for PBXNativeTarget "OfficeHoursUITests" */;
+			buildPhases = (
+				54525B231DF5EE37000FF036 /* Sources */,
+				54525B241DF5EE37000FF036 /* Frameworks */,
+				54525B251DF5EE37000FF036 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54525B291DF5EE37000FF036 /* PBXTargetDependency */,
+			);
+			name = OfficeHoursUITests;
+			productName = OfficeHoursUITests;
+			productReference = 54525B271DF5EE37000FF036 /* OfficeHoursUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54525AFD1DF5EE37000FF036 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Tennessee Data Commons";
+				TargetAttributes = {
+					54525B041DF5EE37000FF036 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3LXVG22MWC;
+						ProvisioningStyle = Automatic;
+					};
+					54525B1B1DF5EE37000FF036 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3LXVG22MWC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 54525B041DF5EE37000FF036;
+					};
+					54525B261DF5EE37000FF036 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3LXVG22MWC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 54525B041DF5EE37000FF036;
+					};
+				};
+			};
+			buildConfigurationList = 54525B001DF5EE37000FF036 /* Build configuration list for PBXProject "OfficeHours" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 54525AFC1DF5EE37000FF036;
+			productRefGroup = 54525B061DF5EE37000FF036 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54525B041DF5EE37000FF036 /* OfficeHours */,
+				54525B1B1DF5EE37000FF036 /* OfficeHoursTests */,
+				54525B261DF5EE37000FF036 /* OfficeHoursUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		54525B031DF5EE37000FF036 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54525B161DF5EE37000FF036 /* LaunchScreen.storyboard in Resources */,
+				54525B131DF5EE37000FF036 /* Assets.xcassets in Resources */,
+				54525B0E1DF5EE37000FF036 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54525B1A1DF5EE37000FF036 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54525B251DF5EE37000FF036 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		54525B011DF5EE37000FF036 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54525B0B1DF5EE37000FF036 /* ViewController.swift in Sources */,
+				54525B091DF5EE37000FF036 /* AppDelegate.swift in Sources */,
+				54525B111DF5EE37000FF036 /* OfficeHours.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54525B181DF5EE37000FF036 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54525B211DF5EE37000FF036 /* OfficeHoursTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54525B231DF5EE37000FF036 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54525B2C1DF5EE37000FF036 /* OfficeHoursUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		54525B1E1DF5EE37000FF036 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54525B041DF5EE37000FF036 /* OfficeHours */;
+			targetProxy = 54525B1D1DF5EE37000FF036 /* PBXContainerItemProxy */;
+		};
+		54525B291DF5EE37000FF036 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54525B041DF5EE37000FF036 /* OfficeHours */;
+			targetProxy = 54525B281DF5EE37000FF036 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		54525B0C1DF5EE37000FF036 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54525B0D1DF5EE37000FF036 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		54525B141DF5EE37000FF036 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54525B151DF5EE37000FF036 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		54525B2E1DF5EE37000FF036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		54525B2F1DF5EE37000FF036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		54525B311DF5EE37000FF036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3LXVG22MWC;
+				INFOPLIST_FILE = OfficeHours/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tndata.OfficeHours;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		54525B321DF5EE37000FF036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3LXVG22MWC;
+				INFOPLIST_FILE = OfficeHours/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tndata.OfficeHours;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		54525B341DF5EE37000FF036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3LXVG22MWC;
+				INFOPLIST_FILE = OfficeHoursTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tndata.OfficeHoursTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OfficeHours.app/OfficeHours";
+			};
+			name = Debug;
+		};
+		54525B351DF5EE37000FF036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3LXVG22MWC;
+				INFOPLIST_FILE = OfficeHoursTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tndata.OfficeHoursTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OfficeHours.app/OfficeHours";
+			};
+			name = Release;
+		};
+		54525B371DF5EE37000FF036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 3LXVG22MWC;
+				INFOPLIST_FILE = OfficeHoursUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tndata.OfficeHoursUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = OfficeHours;
+			};
+			name = Debug;
+		};
+		54525B381DF5EE37000FF036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 3LXVG22MWC;
+				INFOPLIST_FILE = OfficeHoursUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tndata.OfficeHoursUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = OfficeHours;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		54525B001DF5EE37000FF036 /* Build configuration list for PBXProject "OfficeHours" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54525B2E1DF5EE37000FF036 /* Debug */,
+				54525B2F1DF5EE37000FF036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54525B301DF5EE37000FF036 /* Build configuration list for PBXNativeTarget "OfficeHours" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54525B311DF5EE37000FF036 /* Debug */,
+				54525B321DF5EE37000FF036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54525B331DF5EE37000FF036 /* Build configuration list for PBXNativeTarget "OfficeHoursTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54525B341DF5EE37000FF036 /* Debug */,
+				54525B351DF5EE37000FF036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54525B361DF5EE37000FF036 /* Build configuration list for PBXNativeTarget "OfficeHoursUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54525B371DF5EE37000FF036 /* Debug */,
+				54525B381DF5EE37000FF036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		54525B0F1DF5EE37000FF036 /* OfficeHours.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				54525B101DF5EE37000FF036 /* OfficeHours.xcdatamodel */,
+			);
+			currentVersion = 54525B101DF5EE37000FF036 /* OfficeHours.xcdatamodel */;
+			path = OfficeHours.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 54525AFD1DF5EE37000FF036 /* Project object */;
+}
