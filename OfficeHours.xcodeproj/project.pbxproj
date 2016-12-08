@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		54525B091DF5EE37000FF036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B081DF5EE37000FF036 /* AppDelegate.swift */; };
-		54525B0B1DF5EE37000FF036 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B0A1DF5EE37000FF036 /* ViewController.swift */; };
+		54525B0B1DF5EE37000FF036 /* LauncherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B0A1DF5EE37000FF036 /* LauncherController.swift */; };
 		54525B0E1DF5EE37000FF036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54525B0C1DF5EE37000FF036 /* Main.storyboard */; };
 		54525B111DF5EE37000FF036 /* OfficeHours.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54525B0F1DF5EE37000FF036 /* OfficeHours.xcdatamodeld */; };
 		54525B131DF5EE37000FF036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54525B121DF5EE37000FF036 /* Assets.xcassets */; };
 		54525B161DF5EE37000FF036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54525B141DF5EE37000FF036 /* LaunchScreen.storyboard */; };
 		54525B211DF5EE37000FF036 /* OfficeHoursTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B201DF5EE37000FF036 /* OfficeHoursTests.swift */; };
 		54525B2C1DF5EE37000FF036 /* OfficeHoursUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B2B1DF5EE37000FF036 /* OfficeHoursUITests.swift */; };
+		5474E1711DF8B93D0067AF3C /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474E1701DF8B93D0067AF3C /* ScheduleController.swift */; };
+		5474E1731DF8D0BD0067AF3C /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474E1721DF8D0BD0067AF3C /* CourseCell.swift */; };
+		5474E1751DF8D10F0067AF3C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474E1741DF8D10F0067AF3C /* Course.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,7 @@
 /* Begin PBXFileReference section */
 		54525B051DF5EE37000FF036 /* OfficeHours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfficeHours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54525B081DF5EE37000FF036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		54525B0A1DF5EE37000FF036 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		54525B0A1DF5EE37000FF036 /* LauncherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherController.swift; sourceTree = "<group>"; };
 		54525B0D1DF5EE37000FF036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54525B101DF5EE37000FF036 /* OfficeHours.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OfficeHours.xcdatamodel; sourceTree = "<group>"; };
 		54525B121DF5EE37000FF036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		54525B271DF5EE37000FF036 /* OfficeHoursUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfficeHoursUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54525B2B1DF5EE37000FF036 /* OfficeHoursUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeHoursUITests.swift; sourceTree = "<group>"; };
 		54525B2D1DF5EE37000FF036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5474E1701DF8B93D0067AF3C /* ScheduleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
+		5474E1721DF8D0BD0067AF3C /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		5474E1741DF8D10F0067AF3C /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				54525B081DF5EE37000FF036 /* AppDelegate.swift */,
-				54525B0A1DF5EE37000FF036 /* ViewController.swift */,
+				54525B0A1DF5EE37000FF036 /* LauncherController.swift */,
 				54525B0C1DF5EE37000FF036 /* Main.storyboard */,
 				54525B121DF5EE37000FF036 /* Assets.xcassets */,
 				54525B141DF5EE37000FF036 /* LaunchScreen.storyboard */,
 				54525B171DF5EE37000FF036 /* Info.plist */,
 				54525B0F1DF5EE37000FF036 /* OfficeHours.xcdatamodeld */,
+				5474E1701DF8B93D0067AF3C /* ScheduleController.swift */,
+				5474E1721DF8D0BD0067AF3C /* CourseCell.swift */,
+				5474E1741DF8D10F0067AF3C /* Course.swift */,
 			);
 			path = OfficeHours;
 			sourceTree = "<group>";
@@ -265,9 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54525B0B1DF5EE37000FF036 /* ViewController.swift in Sources */,
+				5474E1751DF8D10F0067AF3C /* Course.swift in Sources */,
+				5474E1711DF8B93D0067AF3C /* ScheduleController.swift in Sources */,
+				54525B0B1DF5EE37000FF036 /* LauncherController.swift in Sources */,
 				54525B091DF5EE37000FF036 /* AppDelegate.swift in Sources */,
 				54525B111DF5EE37000FF036 /* OfficeHours.xcdatamodeld in Sources */,
+				5474E1731DF8D0BD0067AF3C /* CourseCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +431,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3LXVG22MWC;
 				INFOPLIST_FILE = OfficeHours/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.tndata.OfficeHours;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,6 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3LXVG22MWC;
 				INFOPLIST_FILE = OfficeHours/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.tndata.OfficeHours;
 				PRODUCT_NAME = "$(TARGET_NAME)";
