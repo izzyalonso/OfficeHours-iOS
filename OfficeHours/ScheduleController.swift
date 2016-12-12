@@ -37,4 +37,8 @@ class ScheduleController: UITableViewController{
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat{
         return 67
     }
+    
+    @IBAction func addClicked(_ sender: Any){
+        performSegue(withIdentifier: "AddCourseFromSchedule", sender: self)
+    }
 }
