@@ -20,8 +20,7 @@ class ScheduleController: UITableViewController, AddCourseDelegate{
         tableView.rowHeight = UITableViewAutomaticDimension
         
         //Dummy data
-        //courses.append(Course(name: "Test", time: "At time"))
-        //courses.append(Course(name: "Test 2", time: "At noon"))
+        courses.append(CourseModel(code: "COMP 1900", name: "Intro to CS", meetingTime: "MW 7", lastMeetingDate: "12/14", instructorName: "Someboody"))
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -43,9 +42,14 @@ class ScheduleController: UITableViewController, AddCourseDelegate{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if (segue.identifier == "AddCourseFromSchedule"){
+        if segue.identifier == "AddCourseFromSchedule"{
             let addCourseController = segue.destination as! AddCourseController
             addCourseController.delegate = self
+        }
+        else if segue.identifier == "CourseFromSchedule"{
+            let courseController = segue.destination as! CourseController
+            let indexPath = tableView.indexPath(for: sender as! CourseCell)
+            courseController.course = courses[indexPath!.row]
         }
     }
     

@@ -15,6 +15,7 @@
 		54525B161DF5EE37000FF036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54525B141DF5EE37000FF036 /* LaunchScreen.storyboard */; };
 		54525B211DF5EE37000FF036 /* OfficeHoursTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B201DF5EE37000FF036 /* OfficeHoursTests.swift */; };
 		54525B2C1DF5EE37000FF036 /* OfficeHoursUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B2B1DF5EE37000FF036 /* OfficeHoursUITests.swift */; };
+		5455C2FD1DFF4BF100C4092C /* CourseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5455C2FC1DFF4BF100C4092C /* CourseController.swift */; };
 		5474E1711DF8B93D0067AF3C /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474E1701DF8B93D0067AF3C /* ScheduleController.swift */; };
 		5474E1731DF8D0BD0067AF3C /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474E1721DF8D0BD0067AF3C /* CourseCell.swift */; };
 		5474E1751DF8D10F0067AF3C /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474E1741DF8D10F0067AF3C /* CourseModel.swift */; };
@@ -54,6 +55,7 @@
 		54525B271DF5EE37000FF036 /* OfficeHoursUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfficeHoursUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54525B2B1DF5EE37000FF036 /* OfficeHoursUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeHoursUITests.swift; sourceTree = "<group>"; };
 		54525B2D1DF5EE37000FF036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5455C2FC1DFF4BF100C4092C /* CourseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseController.swift; sourceTree = "<group>"; };
 		5474E1701DF8B93D0067AF3C /* ScheduleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
 		5474E1721DF8D0BD0067AF3C /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		5474E1741DF8D10F0067AF3C /* CourseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				54525B0A1DF5EE37000FF036 /* LauncherController.swift */,
 				5474E1701DF8B93D0067AF3C /* ScheduleController.swift */,
 				5474E17C1DFA15290067AF3C /* AddCourseController.swift */,
+				5455C2FC1DFF4BF100C4092C /* CourseController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				54525B111DF5EE37000FF036 /* OfficeHours.xcdatamodeld in Sources */,
 				5474E1731DF8D0BD0067AF3C /* CourseCell.swift in Sources */,
 				5474E1791DF9DF070067AF3C /* User.swift in Sources */,
+				5455C2FD1DFF4BF100C4092C /* CourseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
