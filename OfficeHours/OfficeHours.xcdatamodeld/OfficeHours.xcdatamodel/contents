@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class">
+    <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
         <attribute name="accessCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="instructorName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastMeetingDate" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="meetingTiem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="meetingTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Entity" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Course" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>

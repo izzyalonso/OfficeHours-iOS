@@ -9,8 +9,8 @@
 import UIKit
 
 
-class ScheduleController: UITableViewController{
-    var courses = [Course]()
+class ScheduleController: UITableViewController, AddCourseDelegate{
+    var courses = [CourseModel]()
     
     
     override func viewDidLoad(){
@@ -20,8 +20,8 @@ class ScheduleController: UITableViewController{
         tableView.rowHeight = UITableViewAutomaticDimension
         
         //Dummy data
-        courses.append(Course(name: "Test", time: "At time"))
-        courses.append(Course(name: "Test 2", time: "At noon"))
+        //courses.append(Course(name: "Test", time: "At time"))
+        //courses.append(Course(name: "Test 2", time: "At noon"))
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -40,5 +40,17 @@ class ScheduleController: UITableViewController{
     
     @IBAction func addClicked(_ sender: Any){
         performSegue(withIdentifier: "AddCourseFromSchedule", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if (segue.identifier == "AddCourseFromSchedule"){
+            let addCourseController = segue.destination as! AddCourseController
+            addCourseController.delegate = self
+        }
+    }
+    
+    func onCourseAdded(course: CourseModel){
+        courses.append(course)
+        tableView.reloadData()
     }
 }

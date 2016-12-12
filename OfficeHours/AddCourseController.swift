@@ -19,6 +19,15 @@ class AddCourseController: UIViewController{
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var courseContainer: UIView!
     
+    @IBOutlet weak var courseName: UILabel!
+    @IBOutlet weak var courseMeetingTime: UILabel!
+    @IBOutlet weak var courseLastMeetingDate: UILabel!
+    @IBOutlet weak var courseInstructor: UILabel!
+    
+    var delegate: AddCourseDelegate!
+    var course: CourseModel!
+    
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         
@@ -65,6 +74,10 @@ class AddCourseController: UIViewController{
                         self.errorLabel.isHidden = true
                         self.activity.isHidden = true
                         self.courseContainer.isHidden = false
+                        
+                        let course = CourseModel(code: "COMP 1900", name: "Intro to CS", meetingTime: "MW 7", lastMeetingDate: "12/14", instructorName: "Someboody")
+                        
+                        self.setCourse(course: course)
                     }
                     else{
                         self.errorLabel.isHidden = false
@@ -83,10 +96,29 @@ class AddCourseController: UIViewController{
             }
         }
     }
+    
+    func setCourse(course: CourseModel){
+        self.course = course;
+        
+        courseName.text = course.getDisplayName()
+        courseMeetingTime.text = course.getMeetingTime()
+        courseLastMeetingDate.text = course.getLastMeetingDate()
+        courseInstructor.text = course.getInstructorName()
+    }
+    
+    @IBAction func addCourse(){
+        self.delegate.onCourseAdded(course: course)
+        _ = self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension AddCourseController: UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
         return (textField.text?.characters.count)! < 1 && string.characters.count < 2
     }
+}
+
+
+protocol AddCourseDelegate{
+    func onCourseAdded(course: CourseModel)
 }

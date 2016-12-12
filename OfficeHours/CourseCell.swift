@@ -14,8 +14,8 @@ class CourseCell: UITableViewCell{
     @IBOutlet weak var time: UILabel!
 
 
-    func bind(course: Course){
-        name.text = course.name
-        time.text = course.time
+    func bind(course: CourseModel){
+        name.text = course.getName()
+        time.text = course.getMeetingTime()
     }
 }

@@ -265,6 +265,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWx-Mk-OCS">
                                                         <rect key="frame" x="313" y="292" width="30" height="30"/>
                                                         <state key="normal" title="Add"/>
+                                                        <connections>
+                                                            <action selector="addCourse" destination="V18-KH-4Vk" eventType="touchUpInside" id="jl5-VL-cdF"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -347,6 +350,10 @@
                         <outlet property="code3" destination="OFt-kE-uRX" id="8zJ-jl-9Ji"/>
                         <outlet property="code4" destination="zL5-ew-oyI" id="gHT-EK-ipQ"/>
                         <outlet property="courseContainer" destination="ZlE-W2-MIW" id="trO-b7-z9F"/>
+                        <outlet property="courseInstructor" destination="EwC-eI-pfl" id="cwL-gu-VFM"/>
+                        <outlet property="courseLastMeetingDate" destination="b4P-Ii-GTK" id="VFa-hp-NfW"/>
+                        <outlet property="courseMeetingTime" destination="FPp-HD-JJj" id="QFS-Ij-cNI"/>
+                        <outlet property="courseName" destination="RnI-4r-AK8" id="ANG-vp-ERk"/>
                         <outlet property="errorLabel" destination="3IL-Fr-D2T" id="gCz-MT-cVq"/>
                     </connections>
                 </viewController>
