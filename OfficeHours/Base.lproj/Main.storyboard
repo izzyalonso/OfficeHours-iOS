@@ -252,6 +252,12 @@
                             <constraint firstItem="fYr-5h-nTN" firstAttribute="top" secondItem="eIU-RB-55z" secondAttribute="bottom" id="yp5-BU-lK4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="instructorName" destination="1IB-hX-13f" id="xmx-Lz-Rh0"/>
+                        <outlet property="lastMeetingDate" destination="29w-RR-rGR" id="rrD-0d-hKT"/>
+                        <outlet property="meetingTime" destination="cIw-Vs-Sz7" id="5VI-S7-wGj"/>
+                        <outlet property="name" destination="54b-G0-V85" id="9Fy-77-VR6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bi0-oj-x8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
