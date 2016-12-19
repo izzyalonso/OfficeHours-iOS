@@ -7,14 +7,49 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import GoogleSignIn
 
-class LauncherController: UIViewController{
+
+class LauncherController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
+    @IBOutlet weak var googleSignInButton: GIDSignInButton!
+    
+    
     override func viewDidLoad(){
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "MainNavController")
-            UIApplication.shared.keyWindow?.rootViewController = viewController
+        
+        GIDSignIn.sharedInstance().signOut()
+        
+        googleSignInButton.colorScheme = .dark
+        googleSignInButton.style = .standard
+        
+        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?){
+        if let error = error{
+            print(error.localizedDescription)
+            return
         }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = FIRGoogleAuthProvider.credential(
+            withIDToken: authentication.idToken,
+            accessToken: authentication.accessToken
+        )
+        
+        FIRAuth.auth()?.signIn(with: credential){ (user, error) in
+            
+        }
+        
+        // Perform any operations on signed in user here.
+        let ooUser = User(user: user)
+        ooUser.writeToDefaults()
+    }
+    
+    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!, withError error: Error!){
     }
 }
