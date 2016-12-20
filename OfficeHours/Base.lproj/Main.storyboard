@@ -58,7 +58,7 @@
         <!--On Boarding-->
         <scene sceneID="lpA-uZ-gJw">
             <objects>
-                <viewController title="On Boarding" automaticallyAdjustsScrollViewInsets="NO" id="fBM-74-lsQ" sceneMemberID="viewController">
+                <viewController title="On Boarding" automaticallyAdjustsScrollViewInsets="NO" id="fBM-74-lsQ" customClass="OnBoardingController" customModule="OfficeHours" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5W1-gJ-UdH"/>
                         <viewControllerLayoutGuide type="bottom" id="eO6-Jb-blb"/>
@@ -91,6 +91,9 @@
                                                     <segment title="Student"/>
                                                     <segment title="Teacher"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="onTypeSelectorStateChanged:" destination="fBM-74-lsQ" eventType="valueChanged" id="FxW-nf-d4t"/>
+                                                </connections>
                                             </segmentedControl>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8I7-dg-EQi" userLabel="Personal Info Container">
                                                 <rect key="frame" x="16" y="129" width="343" height="258"/>
@@ -127,6 +130,9 @@
                                                     </textField>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bH9-ag-M0v">
                                                         <rect key="frame" x="0.0" y="181" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="onSchoolAddressSwitchStateChanged:" destination="fBM-74-lsQ" eventType="valueChanged" id="Gne-cf-gyz"/>
+                                                        </connections>
                                                     </switch>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I prefer to use my regular email address" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-p4-3VR">
                                                         <rect key="frame" x="57" y="188" width="286" height="17"/>
@@ -207,6 +213,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="599-ax-LVg"/>
+                    <connections>
+                        <outlet property="emailAddress" destination="7u2-Qu-i1o" id="G4k-2x-AdM"/>
+                        <outlet property="firstName" destination="J8X-6B-hOh" id="mRK-db-oHG"/>
+                        <outlet property="lastName" destination="vzt-sv-gge" id="x4v-DS-fR0"/>
+                        <outlet property="personalInfoContainer" destination="8I7-dg-EQi" id="fYD-D2-Jpi"/>
+                        <outlet property="phoneNumber" destination="ikc-ma-tWE" id="JYn-GQ-3a1"/>
+                        <outlet property="schoolEmailAddress" destination="UAb-td-9sX" id="vNw-dI-d13"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zac-C5-l9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,7 +239,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DIg-Dr-bzA" id="Fis-cu-0Mt">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLi-uq-V3I">
@@ -706,7 +720,7 @@
             <objects>
                 <navigationController title="Launcher Nav" automaticallyAdjustsScrollViewInsets="NO" id="Tuf-Nm-2EE" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ijz-aS-Wq0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ijz-aS-Wq0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -724,7 +738,7 @@
             <objects>
                 <navigationController storyboardIdentifier="MainNavController" title="Main Nav" automaticallyAdjustsScrollViewInsets="NO" id="Y3e-CV-JOs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0et-UQ-pKv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0et-UQ-pKv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -742,7 +756,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Db-JN-nge" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WST-eB-6q0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WST-eB-6q0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
