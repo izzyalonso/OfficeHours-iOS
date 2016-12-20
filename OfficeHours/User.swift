@@ -41,6 +41,14 @@ class User{
     }
     
     
+    func getEmail() -> String{
+        return email
+    }
+    
+    func getGoogleToken() -> String{
+        return googleToken
+    }
+    
     func isAccountTypeSet() -> Bool{
         return accountType == nil
     }
@@ -51,6 +59,22 @@ class User{
     
     func isInstructor() -> Bool{
         return accountType == User.instructor
+    }
+    
+    func getFirstName() -> String{
+        return firstName
+    }
+    
+    func getLastName() -> String{
+        return lastName
+    }
+    
+    func getSchoolEmail() -> String{
+        return schoolEmail
+    }
+    
+    func getPhoneNumber() -> String{
+        return phoneNumber
     }
     
     func writeToDefaults(){
