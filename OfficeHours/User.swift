@@ -59,7 +59,7 @@ class User{
     }
     
     func isAccountTypeSet() -> Bool{
-        return accountType == nil
+        return accountType != nil
     }
     
     func isStudent() -> Bool{

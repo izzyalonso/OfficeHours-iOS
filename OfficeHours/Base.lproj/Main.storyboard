@@ -233,6 +233,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="599-ax-LVg"/>
                     <connections>
+                        <outlet property="accountTypeSelector" destination="rjP-WG-FaZ" id="xym-m2-dzR"/>
                         <outlet property="container" destination="PFH-AQ-Rae" id="Wpv-u1-B0B"/>
                         <outlet property="emailAddress" destination="7u2-Qu-i1o" id="G4k-2x-AdM"/>
                         <outlet property="firstName" destination="J8X-6B-hOh" id="mRK-db-oHG"/>

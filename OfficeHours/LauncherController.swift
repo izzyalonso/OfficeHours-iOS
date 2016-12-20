@@ -64,7 +64,8 @@ class LauncherController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         transitionToOnBoarding()
     }
     
-    func signIn(_ signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!, withError error: NSError!){
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user:GIDGoogleUser!, withError error: Error!){
+        
     }
     
     func transitionToOnBoarding(){

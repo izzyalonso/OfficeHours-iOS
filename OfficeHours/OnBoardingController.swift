@@ -12,8 +12,10 @@ import UIKit
 class OnBoardingController: UIViewController{
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var container: UIView!
-    @IBOutlet var personalInfoContainer: UIView!
     
+    @IBOutlet weak var accountTypeSelector: UISegmentedControl!
+    
+    @IBOutlet var personalInfoContainer: UIView!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var emailAddress: UITextField!
@@ -29,17 +31,27 @@ class OnBoardingController: UIViewController{
     override func viewDidLoad(){
         super.viewDidLoad()
         
-        for constraint in container.constraints{
-            if constraint.belongsTo(view: personalInfoContainer){
-                personalInfoConstraints.append(constraint)
-            }
-        }
-        personalInfoContainer.removeFromSuperview()
-        
         user = SharedData.getUser()!
         firstName.text = user.getFirstName()
         lastName.text = user.getLastName()
         emailAddress.text = user.getEmail()
+        
+        if user.isAccountTypeSet(){
+            if user.isStudent(){
+                accountTypeSelector.selectedSegmentIndex = 0
+            }
+            else if user.isInstructor(){
+                accountTypeSelector.selectedSegmentIndex = 1
+            }
+        }
+        else{
+            for constraint in container.constraints{
+                if constraint.belongsTo(view: personalInfoContainer){
+                    personalInfoConstraints.append(constraint)
+                }
+            }
+            personalInfoContainer.removeFromSuperview()
+        }
         
         NotificationCenter.default.addObserver(
             self,
