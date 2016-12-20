@@ -128,7 +128,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bH9-ag-M0v">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bH9-ag-M0v">
                                                         <rect key="frame" x="0.0" y="182" width="51" height="31"/>
                                                         <connections>
                                                             <action selector="onSchoolAddressSwitchStateChanged:" destination="fBM-74-lsQ" eventType="valueChanged" id="Gne-cf-gyz"/>
@@ -183,6 +183,7 @@
                                             <constraint firstItem="rjP-WG-FaZ" firstAttribute="leading" secondItem="PFH-AQ-Rae" secondAttribute="leading" constant="16" id="7Hg-WM-UVy"/>
                                             <constraint firstAttribute="trailing" secondItem="Cae-sU-f1p" secondAttribute="trailing" constant="16" id="AFx-na-kZ3"/>
                                             <constraint firstAttribute="trailing" secondItem="VXL-IG-Iwr" secondAttribute="trailing" constant="16" id="CRv-1S-u3e"/>
+                                            <constraint firstAttribute="bottom" secondItem="rjP-WG-FaZ" secondAttribute="bottom" priority="250" constant="16" id="Gkr-dC-WBw"/>
                                             <constraint firstAttribute="trailing" secondItem="rjP-WG-FaZ" secondAttribute="trailing" constant="16" id="Z1G-UJ-6hS"/>
                                             <constraint firstItem="VXL-IG-Iwr" firstAttribute="top" secondItem="Cae-sU-f1p" secondAttribute="bottom" constant="16" id="g0m-76-SDf"/>
                                             <constraint firstItem="VXL-IG-Iwr" firstAttribute="leading" secondItem="PFH-AQ-Rae" secondAttribute="leading" constant="16" id="gEi-OU-jHB"/>
@@ -214,6 +215,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="599-ax-LVg"/>
                     <connections>
+                        <outlet property="container" destination="PFH-AQ-Rae" id="Wpv-u1-B0B"/>
                         <outlet property="emailAddress" destination="7u2-Qu-i1o" id="G4k-2x-AdM"/>
                         <outlet property="firstName" destination="J8X-6B-hOh" id="mRK-db-oHG"/>
                         <outlet property="lastName" destination="vzt-sv-gge" id="x4v-DS-fR0"/>
