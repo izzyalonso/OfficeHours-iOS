@@ -23,6 +23,7 @@
 		5474E1791DF9DF070067AF3C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474E1781DF9DF070067AF3C /* User.swift */; };
 		5474E17D1DFA15290067AF3C /* AddCourseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474E17C1DFA15290067AF3C /* AddCourseController.swift */; };
 		54CBE3691E0952FE009A3875 /* OnBoardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBE3681E0952FE009A3875 /* OnBoardingController.swift */; };
+		54CBE36B1E09552A009A3875 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBE36A1E09552A009A3875 /* SharedData.swift */; };
 		9227A9A4EA62BC4549447AC7 /* Pods_OfficeHoursUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AB615F7443A6B88144EC12 /* Pods_OfficeHoursUITests.framework */; };
 		E179F393411627A54C26D508 /* Pods_OfficeHoursTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58E04026A28DF63DB82158 /* Pods_OfficeHoursTests.framework */; };
 		FDEF3ADF3D66117BDBE326A8 /* Pods_OfficeHours.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDFB7DA0DF63FCBE8183016 /* Pods_OfficeHours.framework */; };
@@ -73,6 +74,7 @@
 		5474E17C1DFA15290067AF3C /* AddCourseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseController.swift; sourceTree = "<group>"; };
 		54CBE3651E07DE28009A3875 /* OfficeHours-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OfficeHours-Bridging-Header.h"; sourceTree = "<group>"; };
 		54CBE3681E0952FE009A3875 /* OnBoardingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingController.swift; sourceTree = "<group>"; };
+		54CBE36A1E09552A009A3875 /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		67AB615F7443A6B88144EC12 /* Pods_OfficeHoursUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfficeHoursUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78123A86FF7A184EE92E3503 /* Pods-OfficeHoursTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficeHoursTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfficeHoursTests/Pods-OfficeHoursTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6B5DF5EEE00DF674F1BCCE3 /* Pods-OfficeHoursUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficeHoursUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfficeHoursUITests/Pods-OfficeHoursUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				5474E1781DF9DF070067AF3C /* User.swift */,
 				5474E1741DF8D10F0067AF3C /* CourseModel.swift */,
+				54CBE36A1E09552A009A3875 /* SharedData.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				54525B091DF5EE37000FF036 /* AppDelegate.swift in Sources */,
 				54525B111DF5EE37000FF036 /* OfficeHours.xcdatamodeld in Sources */,
 				5474E1731DF8D0BD0067AF3C /* CourseCell.swift in Sources */,
+				54CBE36B1E09552A009A3875 /* SharedData.swift in Sources */,
 				5474E1791DF9DF070067AF3C /* User.swift in Sources */,
 				54CBE3691E0952FE009A3875 /* OnBoardingController.swift in Sources */,
 				5455C2FD1DFF4BF100C4092C /* CourseController.swift in Sources */,

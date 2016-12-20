@@ -48,6 +48,11 @@ class LauncherController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         // Perform any operations on signed in user here.
         let ooUser = User(user: user)
         ooUser.writeToDefaults()
+        SharedData.setUser(ooUser)
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "OnBoardingNavController")
+        UIApplication.shared.keyWindow?.rootViewController = controller
     }
     
     func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!, withError error: NSError!){
