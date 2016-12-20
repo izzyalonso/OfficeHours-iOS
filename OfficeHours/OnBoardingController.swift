@@ -64,6 +64,16 @@ class OnBoardingController: UIViewController{
             }
             personalInfoConstraints.removeAll()
         }
+        
+        if sender.selectedSegmentIndex == 0{
+            //Student
+            user.setAsStudent()
+        }
+        else if sender.selectedSegmentIndex == 1{
+            //Instructor
+            user.setAsInstructor()
+        }
+        user.writeToDefaults()
     }
     
     @IBAction func onSchoolAddressSwitchStateChanged(_ sender: UISwitch){

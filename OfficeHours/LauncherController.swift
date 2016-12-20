@@ -27,6 +27,17 @@ class LauncherController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
+        
+        let user = User.readFromDefaults()
+        if let user = user{
+            SharedData.setUser(user)
+            if user.needsOnBoarding(){
+                transitionToOnBoarding()
+            }
+            else{
+                transitionToSchedule()
+            }
+        }
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?){
@@ -50,11 +61,23 @@ class LauncherController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         ooUser.writeToDefaults()
         SharedData.setUser(ooUser)
         
+        transitionToOnBoarding()
+    }
+    
+    func signIn(_ signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!, withError error: NSError!){
+    }
+    
+    func transitionToOnBoarding(){
+        let id = "OnBoardingNavController";
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "OnBoardingNavController")
+        let controller = storyboard.instantiateViewController(withIdentifier: id)
         UIApplication.shared.keyWindow?.rootViewController = controller
     }
     
-    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!, withError error: NSError!){
+    func transitionToSchedule(){
+        let id = "ScheduleNavController";
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: id)
+        UIApplication.shared.keyWindow?.rootViewController = controller
     }
 }

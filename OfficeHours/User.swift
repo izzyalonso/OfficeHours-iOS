@@ -41,6 +41,15 @@ class User{
     }
     
     
+    func setAsStudent(){
+        accountType = User.student
+    }
+    
+    func setAsInstructor(){
+        accountType = User.instructor
+    }
+    
+    
     func getEmail() -> String{
         return email
     }
@@ -76,6 +85,11 @@ class User{
     func getPhoneNumber() -> String{
         return phoneNumber
     }
+    
+    func needsOnBoarding() -> Bool{
+        return !isOnBoardingComplete
+    }
+    
     
     func writeToDefaults(){
         let defaults = UserDefaults.standard
