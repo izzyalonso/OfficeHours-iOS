@@ -71,7 +71,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFH-AQ-Rae" userLabel="Container">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="397"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="435"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us a little about yourself." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cae-sU-f1p">
                                                 <rect key="frame" x="16" y="16" width="343" height="24"/>
@@ -96,7 +96,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8I7-dg-EQi" userLabel="Personal Info Container">
-                                                <rect key="frame" x="16" y="130" width="343" height="259"/>
+                                                <rect key="frame" x="16" y="130" width="343" height="297"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal information" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdd-Jd-x1O">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="22"/>
@@ -108,13 +108,19 @@
                                                         <rect key="frame" x="0.0" y="30" width="343" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="fBM-74-lsQ" id="IGe-2Z-8bZ"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vzt-sv-gge">
                                                         <rect key="frame" x="0.0" y="68" width="343" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="fBM-74-lsQ" id="3tP-6w-xVe"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7u2-Qu-i1o">
                                                         <rect key="frame" x="0.0" y="106" width="343" height="30"/>
@@ -126,7 +132,10 @@
                                                         <rect key="frame" x="0.0" y="144" width="343" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="fBM-74-lsQ" id="HXb-bA-SqU"/>
+                                                        </connections>
                                                     </textField>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bH9-ag-M0v">
                                                         <rect key="frame" x="0.0" y="182" width="51" height="31"/>
@@ -144,12 +153,18 @@
                                                         <rect key="frame" x="0.0" y="221" width="343" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="fBM-74-lsQ" id="x4B-Km-vPj"/>
+                                                        </connections>
                                                     </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04b-Gd-s6v">
+                                                        <rect key="frame" x="306" y="259" width="37" height="30"/>
+                                                        <state key="normal" title="Done"/>
+                                                    </button>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="bH9-ag-M0v" firstAttribute="top" secondItem="UAb-td-9sX" secondAttribute="bottom" constant="8" id="47c-5s-WKY"/>
-                                                    <constraint firstAttribute="bottom" secondItem="ikc-ma-tWE" secondAttribute="bottom" constant="8" id="69w-lE-0Mo"/>
                                                     <constraint firstItem="J8X-6B-hOh" firstAttribute="top" secondItem="Zdd-Jd-x1O" secondAttribute="bottom" constant="8" id="6Mo-kP-TZQ"/>
                                                     <constraint firstItem="vzt-sv-gge" firstAttribute="top" secondItem="J8X-6B-hOh" secondAttribute="bottom" constant="8" id="7oJ-y9-AuM"/>
                                                     <constraint firstItem="UAb-td-9sX" firstAttribute="leading" secondItem="8I7-dg-EQi" secondAttribute="leading" id="J93-GV-dhX"/>
@@ -164,6 +179,8 @@
                                                     <constraint firstItem="J8X-6B-hOh" firstAttribute="leading" secondItem="8I7-dg-EQi" secondAttribute="leading" id="e9S-yf-hxG"/>
                                                     <constraint firstItem="bH9-ag-M0v" firstAttribute="leading" secondItem="8I7-dg-EQi" secondAttribute="leading" id="esp-CX-lck"/>
                                                     <constraint firstItem="UAb-td-9sX" firstAttribute="top" secondItem="7u2-Qu-i1o" secondAttribute="bottom" constant="8" id="kdD-KE-XD1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="04b-Gd-s6v" secondAttribute="trailing" id="lra-bo-6Vg"/>
+                                                    <constraint firstAttribute="bottom" secondItem="04b-Gd-s6v" secondAttribute="bottom" constant="8" id="mVS-aP-1Cq"/>
                                                     <constraint firstAttribute="trailing" secondItem="UAb-td-9sX" secondAttribute="trailing" id="n2C-VZ-HTo"/>
                                                     <constraint firstItem="7u2-Qu-i1o" firstAttribute="top" secondItem="vzt-sv-gge" secondAttribute="bottom" constant="8" id="qTr-Jc-yUT"/>
                                                     <constraint firstAttribute="trailing" secondItem="7u2-Qu-i1o" secondAttribute="trailing" id="qhY-X3-P2O"/>
@@ -171,6 +188,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="ikc-ma-tWE" secondAttribute="trailing" id="uTn-Gs-xAu"/>
                                                     <constraint firstItem="7u2-Qu-i1o" firstAttribute="leading" secondItem="8I7-dg-EQi" secondAttribute="leading" id="xaH-zX-ffQ"/>
                                                     <constraint firstAttribute="trailing" secondItem="vzt-sv-gge" secondAttribute="trailing" id="xyz-iV-EYs"/>
+                                                    <constraint firstItem="04b-Gd-s6v" firstAttribute="top" secondItem="ikc-ma-tWE" secondAttribute="bottom" constant="8" id="yOt-uT-jwk"/>
                                                     <constraint firstItem="ikc-ma-tWE" firstAttribute="top" secondItem="bH9-ag-M0v" secondAttribute="bottom" constant="8" id="ydi-Gh-TLS"/>
                                                     <constraint firstItem="dbZ-p4-3VR" firstAttribute="centerY" secondItem="bH9-ag-M0v" secondAttribute="centerY" id="ypz-iB-OAd"/>
                                                     <constraint firstItem="Zdd-Jd-x1O" firstAttribute="leading" secondItem="8I7-dg-EQi" secondAttribute="leading" id="z8J-9k-m3h"/>
@@ -222,6 +240,7 @@
                         <outlet property="personalInfoContainer" destination="8I7-dg-EQi" id="fYD-D2-Jpi"/>
                         <outlet property="phoneNumber" destination="ikc-ma-tWE" id="JYn-GQ-3a1"/>
                         <outlet property="schoolEmailAddress" destination="UAb-td-9sX" id="vNw-dI-d13"/>
+                        <outlet property="scrollView" destination="XSU-SX-dkX" id="w57-KP-vln"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zac-C5-l9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -722,7 +741,7 @@
             <objects>
                 <navigationController title="Launcher Nav" automaticallyAdjustsScrollViewInsets="NO" id="Tuf-Nm-2EE" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ijz-aS-Wq0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ijz-aS-Wq0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -740,7 +759,7 @@
             <objects>
                 <navigationController storyboardIdentifier="MainNavController" title="Main Nav" automaticallyAdjustsScrollViewInsets="NO" id="Y3e-CV-JOs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0et-UQ-pKv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0et-UQ-pKv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -758,7 +777,7 @@
             <objects>
                 <navigationController storyboardIdentifier="OnBoardingNavController" automaticallyAdjustsScrollViewInsets="NO" id="0Db-JN-nge" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WST-eB-6q0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WST-eB-6q0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

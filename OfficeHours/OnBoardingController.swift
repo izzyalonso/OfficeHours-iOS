@@ -6,10 +6,11 @@
 //  Copyright © 2016 Tennessee Data Commons. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 class OnBoardingController: UIViewController{
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var container: UIView!
     @IBOutlet var personalInfoContainer: UIView!
     
@@ -39,6 +40,20 @@ class OnBoardingController: UIViewController{
         firstName.text = user.getFirstName()
         lastName.text = user.getLastName()
         emailAddress.text = user.getEmail()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name: NSNotification.Name.UIKeyboardWillShow,
+            object: nil
+        )
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHide),
+            name: NSNotification.Name.UIKeyboardWillHide,
+            object: nil
+        )
     }
     
     @IBAction func onTypeSelectorStateChanged(_ sender: UISegmentedControl){
@@ -55,9 +70,50 @@ class OnBoardingController: UIViewController{
         schoolEmailAddress.isEnabled = !sender.isOn
         if sender.isOn{
             schoolEmailAddress.text = user.getEmail()
+            if schoolEmailAddress.isFirstResponder{
+                schoolEmailAddress.resignFirstResponder()
+            }
         }
         else{
             schoolEmailAddress.text = ""
         }
+    }
+    
+    func keyboardWillShow(notification: NSNotification){
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        self.scrollView.contentInset = contentInset
+    }
+    
+    func keyboardWillHide(notification: NSNotification){
+        scrollView.contentInset = UIEdgeInsets.zero;
+    }
+}
+
+
+extension OnBoardingController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        if textField == firstName{
+            lastName.becomeFirstResponder()
+        }
+        else if textField == lastName{
+            if schoolEmailAddress.isEnabled{
+                schoolEmailAddress.becomeFirstResponder()
+            }
+            else{
+                phoneNumber.becomeFirstResponder()
+            }
+        }
+        else if textField == schoolEmailAddress{
+            phoneNumber.becomeFirstResponder()
+        }
+        else if textField == phoneNumber{
+            phoneNumber.resignFirstResponder()
+        }
+        return false
     }
 }
