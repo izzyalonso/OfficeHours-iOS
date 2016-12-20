@@ -50,6 +50,6 @@ class LauncherController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         ooUser.writeToDefaults()
     }
     
-    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!, withError error: Error!){
+    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!, withError error: NSError!){
     }
 }
