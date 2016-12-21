@@ -31,6 +31,15 @@ class OnBoardingController: UIViewController{
     override func viewDidLoad(){
         super.viewDidLoad()
         
+        firstName.layer.borderColor = UIColor.red.cgColor;
+        firstName.layer.cornerRadius = 4;
+        
+        lastName.layer.borderColor = UIColor.red.cgColor;
+        lastName.layer.cornerRadius = 4;
+        
+        schoolEmailAddress.layer.borderColor = UIColor.red.cgColor;
+        schoolEmailAddress.layer.cornerRadius = 4;
+        
         user = SharedData.getUser()!
         firstName.text = user.getFirstName()
         lastName.text = user.getLastName()
@@ -95,6 +104,7 @@ class OnBoardingController: UIViewController{
             if schoolEmailAddress.isFirstResponder{
                 schoolEmailAddress.resignFirstResponder()
             }
+            schoolEmailAddress.layer.borderWidth = 0
         }
         else{
             schoolEmailAddress.text = ""
@@ -112,7 +122,55 @@ class OnBoardingController: UIViewController{
     }
     
     func keyboardWillHide(notification: NSNotification){
-        scrollView.contentInset = UIEdgeInsets.zero;
+        scrollView.contentInset = UIEdgeInsets.zero
+    }
+    
+    @IBAction func onDoneTapped(){
+        let first = firstName.text!
+        let last = lastName.text!
+        let email = schoolEmailAddress.text!
+        
+        if first.isEmpty{
+            firstName.layer.borderWidth = 1
+            return
+        }
+        if last.isEmpty{
+            lastName.layer.borderWidth = 1
+            return
+        }
+        if !isValidEmail(email){
+            schoolEmailAddress.layer.borderWidth = 1
+            return
+        }
+        
+        user.setName(first: first, last: last)
+        user.set(schoolEmailAddress: email)
+        user.set(phoneNumber: phoneNumber.text!)
+        user.setOnBoardingComplete()
+        user.writeToDefaults();
+        
+        let id = "MainNavController";
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: id)
+        UIApplication.shared.keyWindow?.rootViewController = controller
+    }
+    
+    private func isValidEmail(_ email: String) -> Bool{
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: email)
+    }
+    
+    @IBAction func onErrorCheckedFieldEditingDidBegin(_ sender: UITextField){
+        if sender == firstName{
+            firstName.layer.borderWidth = 0
+        }
+        else if sender == lastName{
+            lastName.layer.borderWidth = 0
+        }
+        else if sender == schoolEmailAddress{
+            schoolEmailAddress.layer.borderWidth = 0
+        }
     }
 }
 

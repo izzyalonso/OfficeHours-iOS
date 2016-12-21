@@ -49,6 +49,23 @@ class User{
         accountType = User.instructor
     }
     
+    func setName(first: String, last: String){
+        firstName = first
+        lastName = last
+    }
+    
+    func set(schoolEmailAddress address: String){
+        schoolEmail = address
+    }
+    
+    func set(phoneNumber number: String){
+        phoneNumber = number
+    }
+    
+    func setOnBoardingComplete(){
+        isOnBoardingComplete = true
+    }
+    
     
     func getEmail() -> String{
         return email

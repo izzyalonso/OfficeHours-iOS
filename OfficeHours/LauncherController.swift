@@ -76,7 +76,7 @@ class LauncherController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
     }
     
     func transitionToSchedule(){
-        let id = "ScheduleNavController";
+        let id = "MainNavController";
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: id)
         UIApplication.shared.keyWindow?.rootViewController = controller
