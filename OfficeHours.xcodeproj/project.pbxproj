@@ -16,11 +16,18 @@
 		54525B211DF5EE37000FF036 /* OfficeHoursTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B201DF5EE37000FF036 /* OfficeHoursTests.swift */; };
 		54525B2C1DF5EE37000FF036 /* OfficeHoursUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B2B1DF5EE37000FF036 /* OfficeHoursUITests.swift */; };
 		5455C2FD1DFF4BF100C4092C /* CourseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5455C2FC1DFF4BF100C4092C /* CourseController.swift */; };
+		5455C2FF1E0093EE00C4092C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5455C2FE1E0093EE00C4092C /* GoogleService-Info.plist */; };
 		5474E1711DF8B93D0067AF3C /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474E1701DF8B93D0067AF3C /* ScheduleController.swift */; };
 		5474E1731DF8D0BD0067AF3C /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474E1721DF8D0BD0067AF3C /* CourseCell.swift */; };
 		5474E1751DF8D10F0067AF3C /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474E1741DF8D10F0067AF3C /* CourseModel.swift */; };
 		5474E1791DF9DF070067AF3C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474E1781DF9DF070067AF3C /* User.swift */; };
 		5474E17D1DFA15290067AF3C /* AddCourseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5474E17C1DFA15290067AF3C /* AddCourseController.swift */; };
+		54CBE3691E0952FE009A3875 /* OnBoardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBE3681E0952FE009A3875 /* OnBoardingController.swift */; };
+		54CBE36B1E09552A009A3875 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBE36A1E09552A009A3875 /* SharedData.swift */; };
+		54CBE36E1E095F39009A3875 /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBE36D1E095F39009A3875 /* NSLayoutConstraintExtension.swift */; };
+		9227A9A4EA62BC4549447AC7 /* Pods_OfficeHoursUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AB615F7443A6B88144EC12 /* Pods_OfficeHoursUITests.framework */; };
+		E179F393411627A54C26D508 /* Pods_OfficeHoursTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58E04026A28DF63DB82158 /* Pods_OfficeHoursTests.framework */; };
+		FDEF3ADF3D66117BDBE326A8 /* Pods_OfficeHours.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDFB7DA0DF63FCBE8183016 /* Pods_OfficeHours.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E163066560EE50D41D4DA46 /* Pods-OfficeHours.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficeHours.release.xcconfig"; path = "Pods/Target Support Files/Pods-OfficeHours/Pods-OfficeHours.release.xcconfig"; sourceTree = "<group>"; };
+		1A58E04026A28DF63DB82158 /* Pods_OfficeHoursTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfficeHoursTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CDFB7DA0DF63FCBE8183016 /* Pods_OfficeHours.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfficeHours.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C30BD46C8ABCB158B79671D /* Pods-OfficeHoursUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficeHoursUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OfficeHoursUITests/Pods-OfficeHoursUITests.release.xcconfig"; sourceTree = "<group>"; };
 		54525B051DF5EE37000FF036 /* OfficeHours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfficeHours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54525B081DF5EE37000FF036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54525B0A1DF5EE37000FF036 /* LauncherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherController.swift; sourceTree = "<group>"; };
@@ -56,11 +67,21 @@
 		54525B2B1DF5EE37000FF036 /* OfficeHoursUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeHoursUITests.swift; sourceTree = "<group>"; };
 		54525B2D1DF5EE37000FF036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5455C2FC1DFF4BF100C4092C /* CourseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseController.swift; sourceTree = "<group>"; };
+		5455C2FE1E0093EE00C4092C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5474E1701DF8B93D0067AF3C /* ScheduleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
 		5474E1721DF8D0BD0067AF3C /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		5474E1741DF8D10F0067AF3C /* CourseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
 		5474E1781DF9DF070067AF3C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5474E17C1DFA15290067AF3C /* AddCourseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseController.swift; sourceTree = "<group>"; };
+		54CBE3651E07DE28009A3875 /* OfficeHours-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OfficeHours-Bridging-Header.h"; sourceTree = "<group>"; };
+		54CBE3681E0952FE009A3875 /* OnBoardingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingController.swift; sourceTree = "<group>"; };
+		54CBE36A1E09552A009A3875 /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
+		54CBE36D1E095F39009A3875 /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
+		67AB615F7443A6B88144EC12 /* Pods_OfficeHoursUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfficeHoursUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78123A86FF7A184EE92E3503 /* Pods-OfficeHoursTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficeHoursTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfficeHoursTests/Pods-OfficeHoursTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6B5DF5EEE00DF674F1BCCE3 /* Pods-OfficeHoursUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficeHoursUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfficeHoursUITests/Pods-OfficeHoursUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C5F4342722628559CDCAD272 /* Pods-OfficeHours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficeHours.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfficeHours/Pods-OfficeHours.debug.xcconfig"; sourceTree = "<group>"; };
+		D31716BB88A52568B3FB1AE5 /* Pods-OfficeHoursTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficeHoursTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OfficeHoursTests/Pods-OfficeHoursTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEF3ADF3D66117BDBE326A8 /* Pods_OfficeHours.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E179F393411627A54C26D508 /* Pods_OfficeHoursTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +105,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9227A9A4EA62BC4549447AC7 /* Pods_OfficeHoursUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35F192EE06A3D59A74926D9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CDFB7DA0DF63FCBE8183016 /* Pods_OfficeHours.framework */,
+				1A58E04026A28DF63DB82158 /* Pods_OfficeHoursTests.framework */,
+				67AB615F7443A6B88144EC12 /* Pods_OfficeHoursUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		54525AFC1DF5EE37000FF036 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +129,8 @@
 				54525B1F1DF5EE37000FF036 /* OfficeHoursTests */,
 				54525B2A1DF5EE37000FF036 /* OfficeHoursUITests */,
 				54525B061DF5EE37000FF036 /* Products */,
+				D5CABB5BC4EF394DBC721DE0 /* Pods */,
+				35F192EE06A3D59A74926D9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,7 +153,9 @@
 				54525B121DF5EE37000FF036 /* Assets.xcassets */,
 				54525B141DF5EE37000FF036 /* LaunchScreen.storyboard */,
 				54525B171DF5EE37000FF036 /* Info.plist */,
+				5455C2FE1E0093EE00C4092C /* GoogleService-Info.plist */,
 				54525B0F1DF5EE37000FF036 /* OfficeHours.xcdatamodeld */,
+				54CBE3651E07DE28009A3875 /* OfficeHours-Bridging-Header.h */,
 			);
 			path = OfficeHours;
 			sourceTree = "<group>";
@@ -145,6 +183,7 @@
 			children = (
 				5474E17B1DFA14FE0067AF3C /* cell */,
 				5474E17A1DFA14A30067AF3C /* controller */,
+				54CBE36C1E095ED6009A3875 /* extension */,
 				5474E1771DF9DEE10067AF3C /* model */,
 			);
 			name = src;
@@ -155,6 +194,7 @@
 			children = (
 				5474E1781DF9DF070067AF3C /* User.swift */,
 				5474E1741DF8D10F0067AF3C /* CourseModel.swift */,
+				54CBE36A1E09552A009A3875 /* SharedData.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -166,6 +206,7 @@
 				5474E1701DF8B93D0067AF3C /* ScheduleController.swift */,
 				5474E17C1DFA15290067AF3C /* AddCourseController.swift */,
 				5455C2FC1DFF4BF100C4092C /* CourseController.swift */,
+				54CBE3681E0952FE009A3875 /* OnBoardingController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -178,6 +219,27 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		54CBE36C1E095ED6009A3875 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				54CBE36D1E095F39009A3875 /* NSLayoutConstraintExtension.swift */,
+			);
+			name = extension;
+			sourceTree = "<group>";
+		};
+		D5CABB5BC4EF394DBC721DE0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4342722628559CDCAD272 /* Pods-OfficeHours.debug.xcconfig */,
+				0E163066560EE50D41D4DA46 /* Pods-OfficeHours.release.xcconfig */,
+				78123A86FF7A184EE92E3503 /* Pods-OfficeHoursTests.debug.xcconfig */,
+				D31716BB88A52568B3FB1AE5 /* Pods-OfficeHoursTests.release.xcconfig */,
+				A6B5DF5EEE00DF674F1BCCE3 /* Pods-OfficeHoursUITests.debug.xcconfig */,
+				4C30BD46C8ABCB158B79671D /* Pods-OfficeHoursUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,9 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54525B301DF5EE37000FF036 /* Build configuration list for PBXNativeTarget "OfficeHours" */;
 			buildPhases = (
+				895A309C96F06E16331ABF5D /* [CP] Check Pods Manifest.lock */,
 				54525B011DF5EE37000FF036 /* Sources */,
 				54525B021DF5EE37000FF036 /* Frameworks */,
 				54525B031DF5EE37000FF036 /* Resources */,
+				11D193CE99BE1A056F7F053F /* [CP] Embed Pods Frameworks */,
+				13654D93ADD7133A076CD0CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,9 +267,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54525B331DF5EE37000FF036 /* Build configuration list for PBXNativeTarget "OfficeHoursTests" */;
 			buildPhases = (
+				B1D8F4F379D5752A801ED9B3 /* [CP] Check Pods Manifest.lock */,
 				54525B181DF5EE37000FF036 /* Sources */,
 				54525B191DF5EE37000FF036 /* Frameworks */,
 				54525B1A1DF5EE37000FF036 /* Resources */,
+				747422E37A994F9CEBFDD69D /* [CP] Embed Pods Frameworks */,
+				F11A9433FF7F1AB75E8249AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,9 +288,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54525B361DF5EE37000FF036 /* Build configuration list for PBXNativeTarget "OfficeHoursUITests" */;
 			buildPhases = (
+				839D87667B7ED7935AD73125 /* [CP] Check Pods Manifest.lock */,
 				54525B231DF5EE37000FF036 /* Sources */,
 				54525B241DF5EE37000FF036 /* Frameworks */,
 				54525B251DF5EE37000FF036 /* Resources */,
+				FAC7C8F52C7FBDD17EC0F67D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,12 +311,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Tennessee Data Commons";
 				TargetAttributes = {
 					54525B041DF5EE37000FF036 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 3LXVG22MWC;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					54525B1B1DF5EE37000FF036 = {
@@ -289,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54525B161DF5EE37000FF036 /* LaunchScreen.storyboard in Resources */,
+				5455C2FF1E0093EE00C4092C /* GoogleService-Info.plist in Resources */,
 				54525B131DF5EE37000FF036 /* Assets.xcassets in Resources */,
 				54525B0E1DF5EE37000FF036 /* Main.storyboard in Resources */,
 			);
@@ -310,6 +382,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11D193CE99BE1A056F7F053F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfficeHours/Pods-OfficeHours-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13654D93ADD7133A076CD0CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfficeHours/Pods-OfficeHours-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		747422E37A994F9CEBFDD69D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfficeHoursTests/Pods-OfficeHoursTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		839D87667B7ED7935AD73125 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		895A309C96F06E16331ABF5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B1D8F4F379D5752A801ED9B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F11A9433FF7F1AB75E8249AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfficeHoursTests/Pods-OfficeHoursTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAC7C8F52C7FBDD17EC0F67D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfficeHoursUITests/Pods-OfficeHoursUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		54525B011DF5EE37000FF036 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -322,7 +517,10 @@
 				54525B091DF5EE37000FF036 /* AppDelegate.swift in Sources */,
 				54525B111DF5EE37000FF036 /* OfficeHours.xcdatamodeld in Sources */,
 				5474E1731DF8D0BD0067AF3C /* CourseCell.swift in Sources */,
+				54CBE36E1E095F39009A3875 /* NSLayoutConstraintExtension.swift in Sources */,
+				54CBE36B1E09552A009A3875 /* SharedData.swift in Sources */,
 				5474E1791DF9DF070067AF3C /* User.swift in Sources */,
+				54CBE3691E0952FE009A3875 /* OnBoardingController.swift in Sources */,
 				5455C2FD1DFF4BF100C4092C /* CourseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +594,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -445,6 +644,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -471,34 +671,42 @@
 		};
 		54525B311DF5EE37000FF036 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5F4342722628559CDCAD272 /* Pods-OfficeHours.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3LXVG22MWC;
 				INFOPLIST_FILE = OfficeHours/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.tndata.OfficeHours;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OfficeHours/OfficeHours-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		54525B321DF5EE37000FF036 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E163066560EE50D41D4DA46 /* Pods-OfficeHours.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3LXVG22MWC;
 				INFOPLIST_FILE = OfficeHours/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.tndata.OfficeHours;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OfficeHours/OfficeHours-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		54525B341DF5EE37000FF036 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78123A86FF7A184EE92E3503 /* Pods-OfficeHoursTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +722,7 @@
 		};
 		54525B351DF5EE37000FF036 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D31716BB88A52568B3FB1AE5 /* Pods-OfficeHoursTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -529,6 +738,7 @@
 		};
 		54525B371DF5EE37000FF036 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6B5DF5EEE00DF674F1BCCE3 /* Pods-OfficeHoursUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3LXVG22MWC;
@@ -543,6 +753,7 @@
 		};
 		54525B381DF5EE37000FF036 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C30BD46C8ABCB158B79671D /* Pods-OfficeHoursUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3LXVG22MWC;
