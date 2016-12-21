@@ -38,7 +38,12 @@ class ScheduleController: UITableViewController, AddCourseDelegate{
     }
     
     @IBAction func addClicked(_ sender: Any){
-        performSegue(withIdentifier: "AddCourseFromSchedule", sender: self)
+        if SharedData.getUser()!.isStudent(){
+            performSegue(withIdentifier: "AddCourseFromSchedule", sender: self)
+        }
+        else{
+            performSegue(withIdentifier: "CourseEditorFromSchedule", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
