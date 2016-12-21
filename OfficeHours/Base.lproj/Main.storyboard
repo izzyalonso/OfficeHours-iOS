@@ -486,7 +486,7 @@
         <!--Course Editor-->
         <scene sceneID="wdM-uA-xIy">
             <objects>
-                <viewController title="Course Editor" automaticallyAdjustsScrollViewInsets="NO" id="N0s-Wn-qgM" sceneMemberID="viewController">
+                <viewController title="Course Editor" automaticallyAdjustsScrollViewInsets="NO" id="N0s-Wn-qgM" customClass="CourseEditorController" customModule="OfficeHours" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zrm-Mw-HWK"/>
                         <viewControllerLayoutGuide type="bottom" id="IhI-w8-hbA"/>
@@ -499,40 +499,40 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zea-Ph-hL3">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="378"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the relevant course information" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coo-Uo-RN1">
-                                                <rect key="frame" x="16" y="16" width="343" height="21"/>
+                                                <rect key="frame" x="16" y="16" width="343" height="22"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giw-87-jjj">
-                                                <rect key="frame" x="16" y="53" width="343" height="18"/>
+                                                <rect key="frame" x="16" y="54" width="343" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENGL 1010" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKp-IV-0Ow">
-                                                <rect key="frame" x="16" y="79" width="343" height="30"/>
+                                                <rect key="frame" x="16" y="80" width="343" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pW2-Ri-0bI">
-                                                <rect key="frame" x="16" y="125" width="343" height="18"/>
+                                                <rect key="frame" x="16" y="126" width="343" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="English Composition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GC0-St-6tO">
-                                                <rect key="frame" x="16" y="151" width="343" height="30"/>
+                                                <rect key="frame" x="16" y="152" width="343" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41j-Hx-rrA">
-                                                <rect key="frame" x="16" y="197" width="343" height="55"/>
+                                                <rect key="frame" x="16" y="198" width="343" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meeting time" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF8-cg-GkR">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="18"/>
@@ -570,7 +570,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGz-Bo-l4O">
-                                                <rect key="frame" x="16" y="268" width="343" height="47"/>
+                                                <rect key="frame" x="16" y="269" width="343" height="47"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last meeting date" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nh-Fd-T4F">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="18"/>
@@ -593,6 +593,7 @@
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstItem="9nh-Fd-T4F" firstAttribute="leading" secondItem="fGz-Bo-l4O" secondAttribute="leading" id="26Z-on-LlU"/>
                                                     <constraint firstAttribute="bottom" secondItem="Nxc-DF-6dj" secondAttribute="bottom" id="4p6-PT-lU6"/>
@@ -604,9 +605,12 @@
                                                     <constraint firstItem="9bW-uS-Rsn" firstAttribute="centerY" secondItem="Nxc-DF-6dj" secondAttribute="centerY" id="dCt-la-B5F"/>
                                                     <constraint firstAttribute="trailing" secondItem="9nh-Fd-T4F" secondAttribute="trailing" id="mcw-Yf-TDu"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="gye-an-07J" appends="YES" id="ydU-LJ-ZTn"/>
+                                                </connections>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfL-Ne-OzM">
-                                                <rect key="frame" x="322" y="331" width="37" height="30"/>
+                                                <rect key="frame" x="322" y="332" width="37" height="30"/>
                                                 <state key="normal" title="Done"/>
                                             </button>
                                         </subviews>
@@ -656,10 +660,53 @@
                             <constraint firstItem="Kqs-CJ-M46" firstAttribute="top" secondItem="Zrm-Mw-HWK" secondAttribute="bottom" id="tJd-ao-aJY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lastMeetingDateLabel" destination="Nxc-DF-6dj" id="zRO-8e-9sm"/>
+                        <segue destination="LkJ-6j-PWB" kind="show" identifier="DatePickerFromCourseEditor" id="f8x-Jh-nnj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xv1-h9-yty" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer delaysTouchesEnded="NO" id="gye-an-07J" userLabel="Last Meeting Date Tap">
+                    <connections>
+                        <action selector="pickDate:" destination="N0s-Wn-qgM" id="le4-aP-Oxd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2232.8000000000002" y="2773.7631184407796"/>
+        </scene>
+        <!--Pick a date-->
+        <scene sceneID="QAU-5l-PF1">
+            <objects>
+                <viewController title="Pick a date" id="LkJ-6j-PWB" customClass="DatePickerController" customModule="OfficeHours" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ycS-o9-ojP"/>
+                        <viewControllerLayoutGuide type="bottom" id="zzi-IJ-vty"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uZv-Gm-Gv5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="SbL-wh-ka3">
+                                <rect key="frame" x="0.0" y="225" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="504026091.00027198">
+                                    <!--2016-12-21 15:14:51 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SbL-wh-ka3" firstAttribute="centerY" secondItem="uZv-Gm-Gv5" secondAttribute="centerY" id="Hfa-fc-iC1"/>
+                            <constraint firstAttribute="trailing" secondItem="SbL-wh-ka3" secondAttribute="trailing" id="pw9-xz-Ofp"/>
+                            <constraint firstItem="SbL-wh-ka3" firstAttribute="leading" secondItem="uZv-Gm-Gv5" secondAttribute="leading" id="qC8-1q-0GW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="SbL-wh-ka3" id="wsh-HI-XZp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iFO-AJ-BDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3164" y="3156"/>
         </scene>
         <!--Add Course-->
         <scene sceneID="X7W-s8-J5U">
