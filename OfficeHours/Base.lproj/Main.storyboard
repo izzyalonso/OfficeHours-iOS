@@ -897,10 +897,47 @@
                             <constraint firstItem="7PS-Gl-oy9" firstAttribute="leading" secondItem="hqZ-WX-aQD" secondAttribute="leading" id="xRU-8w-wbp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="ywB-Vy-hkc" kind="show" identifier="TimePickerFromRangePicker" id="o8a-SK-RVl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4nn-3P-XIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3164" y="2414.8425787106448"/>
+        </scene>
+        <!--Pick a time-->
+        <scene sceneID="sm5-fT-Xm3">
+            <objects>
+                <viewController title="Pick a time" id="ywB-Vy-hkc" customClass="TimePickerController" customModule="OfficeHours" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Szj-gK-IfX"/>
+                        <viewControllerLayoutGuide type="bottom" id="feV-eP-cH0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MJg-st-naq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zk9-N4-Z4x">
+                                <rect key="frame" x="0.0" y="225" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="504087394.52513897">
+                                    <!--2016-12-22 08:16:34 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zk9-N4-Z4x" secondAttribute="trailing" id="PJH-Cu-wJn"/>
+                            <constraint firstItem="zk9-N4-Z4x" firstAttribute="centerY" secondItem="MJg-st-naq" secondAttribute="centerY" id="buL-kj-Dkh"/>
+                            <constraint firstItem="zk9-N4-Z4x" firstAttribute="leading" secondItem="MJg-st-naq" secondAttribute="leading" id="rLf-cF-evA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timePicker" destination="zk9-N4-Z4x" id="WFS-RL-AOs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrp-Nt-j3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4010" y="2415"/>
         </scene>
         <!--Pick a date-->
         <scene sceneID="QAU-5l-PF1">
