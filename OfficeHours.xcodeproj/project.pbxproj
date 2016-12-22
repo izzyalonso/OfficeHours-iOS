@@ -25,6 +25,7 @@
 		5481F71E1E0AD35700171170 /* CourseEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481F71D1E0AD35700171170 /* CourseEditorController.swift */; };
 		5481F7201E0AD43500171170 /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481F71F1E0AD43500171170 /* DatePickerController.swift */; };
 		5481F7221E0BC39D00171170 /* TimePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481F7211E0BC39D00171170 /* TimePickerController.swift */; };
+		5481F7241E0BC4B500171170 /* TimeSlotPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481F7231E0BC4B500171170 /* TimeSlotPickerController.swift */; };
 		54CBE3691E0952FE009A3875 /* OnBoardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBE3681E0952FE009A3875 /* OnBoardingController.swift */; };
 		54CBE36B1E09552A009A3875 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBE36A1E09552A009A3875 /* SharedData.swift */; };
 		54CBE36E1E095F39009A3875 /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBE36D1E095F39009A3875 /* NSLayoutConstraintExtension.swift */; };
@@ -79,6 +80,7 @@
 		5481F71D1E0AD35700171170 /* CourseEditorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseEditorController.swift; sourceTree = "<group>"; };
 		5481F71F1E0AD43500171170 /* DatePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerController.swift; sourceTree = "<group>"; };
 		5481F7211E0BC39D00171170 /* TimePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerController.swift; sourceTree = "<group>"; };
+		5481F7231E0BC4B500171170 /* TimeSlotPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSlotPickerController.swift; sourceTree = "<group>"; };
 		54CBE3651E07DE28009A3875 /* OfficeHours-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OfficeHours-Bridging-Header.h"; sourceTree = "<group>"; };
 		54CBE3681E0952FE009A3875 /* OnBoardingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingController.swift; sourceTree = "<group>"; };
 		54CBE36A1E09552A009A3875 /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				5481F71D1E0AD35700171170 /* CourseEditorController.swift */,
 				5481F71F1E0AD43500171170 /* DatePickerController.swift */,
 				5481F7211E0BC39D00171170 /* TimePickerController.swift */,
+				5481F7231E0BC4B500171170 /* TimeSlotPickerController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				5481F71E1E0AD35700171170 /* CourseEditorController.swift in Sources */,
 				54525B111DF5EE37000FF036 /* OfficeHours.xcdatamodeld in Sources */,
 				5481F7221E0BC39D00171170 /* TimePickerController.swift in Sources */,
+				5481F7241E0BC4B500171170 /* TimeSlotPickerController.swift in Sources */,
 				5474E1731DF8D0BD0067AF3C /* CourseCell.swift in Sources */,
 				54CBE36E1E095F39009A3875 /* NSLayoutConstraintExtension.swift in Sources */,
 				54CBE36B1E09552A009A3875 /* SharedData.swift in Sources */,

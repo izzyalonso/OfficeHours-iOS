@@ -13,7 +13,7 @@ class TimePickerController: UIViewController{
     @IBOutlet weak var timePicker: UIDatePicker!
     
     
-    var delegate: DatePickerDelegate!
+    var delegate: TimePickerDelegate!
     var time: Date?
     
     
@@ -26,7 +26,7 @@ class TimePickerController: UIViewController{
     }
     
     override func viewWillDisappear(_ animated: Bool){
-        delegate.onDatePicked(timePicker.date)
+        delegate.onTimePicked(timePicker.date)
         super.viewWillDisappear(animated)
     }
 }

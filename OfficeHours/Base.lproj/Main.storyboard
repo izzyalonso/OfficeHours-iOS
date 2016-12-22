@@ -555,6 +555,7 @@
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="vF8-cg-GkR" secondAttribute="trailing" id="1uo-OE-PE3"/>
                                                     <constraint firstAttribute="trailing" secondItem="7m3-RI-0uH" secondAttribute="trailing" id="5G3-kY-Ijn"/>
@@ -568,6 +569,9 @@
                                                     <constraint firstItem="7m3-RI-0uH" firstAttribute="centerY" secondItem="4Mm-8k-tXJ" secondAttribute="centerY" id="rFX-No-n4S"/>
                                                     <constraint firstAttribute="trailing" secondItem="vF8-cg-GkR" secondAttribute="trailing" id="xI1-Yw-1H9"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="xir-Q6-KTF" appends="YES" id="58n-cL-MpU"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGz-Bo-l4O">
                                                 <rect key="frame" x="16" y="269" width="343" height="47"/>
@@ -662,8 +666,9 @@
                     </view>
                     <connections>
                         <outlet property="lastMeetingDateLabel" destination="Nxc-DF-6dj" id="zRO-8e-9sm"/>
+                        <outlet property="meetingTimeLabel" destination="4Mm-8k-tXJ" id="ElF-cl-B0y"/>
                         <segue destination="LkJ-6j-PWB" kind="show" identifier="DatePickerFromCourseEditor" id="f8x-Jh-nnj"/>
-                        <segue destination="O2i-1s-bRM" kind="show" id="L0V-jQ-tdM"/>
+                        <segue destination="O2i-1s-bRM" kind="show" identifier="TimeSlotPickerFromCourseEditor" id="L0V-jQ-tdM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xv1-h9-yty" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -672,13 +677,18 @@
                         <action selector="pickDate:" destination="N0s-Wn-qgM" id="le4-aP-Oxd"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="xir-Q6-KTF" userLabel="Meeting Time Tap">
+                    <connections>
+                        <action selector="pickMeetingTime:" destination="N0s-Wn-qgM" id="SfL-Vw-4Uq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2232.8000000000002" y="2773.7631184407796"/>
         </scene>
-        <!--Pick a time range-->
+        <!--Pick a time slot-->
         <scene sceneID="C5e-uk-CPZ">
             <objects>
-                <viewController title="Pick a time range" automaticallyAdjustsScrollViewInsets="NO" id="O2i-1s-bRM" sceneMemberID="viewController">
+                <viewController title="Pick a time slot" automaticallyAdjustsScrollViewInsets="NO" id="O2i-1s-bRM" customClass="TimeSlotPickerController" customModule="OfficeHours" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wKo-jn-5bu"/>
                         <viewControllerLayoutGuide type="bottom" id="OXT-Gh-729"/>
@@ -757,7 +767,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaa-Bq-WLA" userLabel="From Container">
                                                 <rect key="frame" x="16" y="299" width="343" height="53"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TM-a0-Kye">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TM-a0-Kye">
                                                         <rect key="frame" x="0.0" y="16" width="316" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <nil key="textColor"/>
@@ -772,6 +782,7 @@
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstItem="7TM-a0-Kye" firstAttribute="leading" secondItem="kaa-Bq-WLA" secondAttribute="leading" id="FT4-He-miF"/>
                                                     <constraint firstItem="yX5-Cw-J6Q" firstAttribute="leading" secondItem="7TM-a0-Kye" secondAttribute="trailing" constant="8" id="GmG-tq-lDH"/>
@@ -780,6 +791,9 @@
                                                     <constraint firstAttribute="bottom" secondItem="7TM-a0-Kye" secondAttribute="bottom" constant="16" id="d53-1a-AwW"/>
                                                     <constraint firstItem="yX5-Cw-J6Q" firstAttribute="centerY" secondItem="7TM-a0-Kye" secondAttribute="centerY" id="d8A-Nc-zPP"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="MbH-1Z-KSV" appends="YES" id="Gll-kh-uqI"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7f-kF-DGb">
                                                 <rect key="frame" x="8" y="352" width="359" height="1"/>
@@ -791,7 +805,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hbu-5s-Ckn" userLabel="To Container">
                                                 <rect key="frame" x="16" y="353" width="343" height="53"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0M-Gd-FyP">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0M-Gd-FyP">
                                                         <rect key="frame" x="0.0" y="16" width="316" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <nil key="textColor"/>
@@ -806,6 +820,7 @@
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="h0M-Gd-FyP" secondAttribute="bottom" constant="16" id="5XV-sm-4Vv"/>
                                                     <constraint firstItem="h0M-Gd-FyP" firstAttribute="top" secondItem="Hbu-5s-Ckn" secondAttribute="top" constant="16" id="Ufn-8A-ldC"/>
@@ -814,6 +829,9 @@
                                                     <constraint firstAttribute="trailing" secondItem="glR-D4-z3S" secondAttribute="trailing" id="jLe-ph-P7M"/>
                                                     <constraint firstItem="h0M-Gd-FyP" firstAttribute="leading" secondItem="Hbu-5s-Ckn" secondAttribute="leading" id="llG-jI-vGk"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Mkx-Qw-UPT" appends="YES" id="Q4c-8W-O2M"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHU-yg-r7x">
                                                 <rect key="frame" x="8" y="406" width="359" height="1"/>
@@ -825,6 +843,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICZ-e3-PEq">
                                                 <rect key="frame" x="322" y="423" width="37" height="30"/>
                                                 <state key="normal" title="Done"/>
+                                                <connections>
+                                                    <action selector="onDoneTapped" destination="O2i-1s-bRM" eventType="touchUpInside" id="6R7-wS-H5i"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -898,10 +919,28 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="ywB-Vy-hkc" kind="show" identifier="TimePickerFromRangePicker" id="o8a-SK-RVl"/>
+                        <outlet property="fSwitch" destination="O8f-rV-PBq" id="fdq-DE-wFp"/>
+                        <outlet property="from" destination="7TM-a0-Kye" id="aUt-3S-qXj"/>
+                        <outlet property="mSwitch" destination="S3t-uq-zFo" id="dTS-8n-vRm"/>
+                        <outlet property="rSwitch" destination="mV0-Sa-kI1" id="nwy-w4-f3N"/>
+                        <outlet property="sSwitch" destination="8S0-Ti-NFx" id="DwP-Tr-6OO"/>
+                        <outlet property="tSwitch" destination="Lcp-cL-fvj" id="zY1-WC-2Qj"/>
+                        <outlet property="to" destination="h0M-Gd-FyP" id="Hlf-Bu-k4R"/>
+                        <outlet property="wSwitch" destination="ok4-oH-A5o" id="5fO-bI-aCG"/>
+                        <segue destination="ywB-Vy-hkc" kind="show" identifier="TimePickerFromSlotPicker" id="o8a-SK-RVl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4nn-3P-XIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MbH-1Z-KSV" userLabel="From Tap Recognizer">
+                    <connections>
+                        <action selector="onFromTapped:" destination="O2i-1s-bRM" id="RVK-zY-R8X"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Mkx-Qw-UPT" userLabel="To Tap Recognizer">
+                    <connections>
+                        <action selector="onToTapped:" destination="O2i-1s-bRM" id="h7P-os-Q7k"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3164" y="2414.8425787106448"/>
         </scene>
