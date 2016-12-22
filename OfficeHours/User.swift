@@ -95,6 +95,10 @@ class User{
         return lastName
     }
     
+    func getName() -> String{
+        return "\(firstName) \(lastName)"
+    }
+    
     func getSchoolEmail() -> String{
         return schoolEmail
     }

@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ScheduleController: UITableViewController, AddCourseDelegate{
+class ScheduleController: UITableViewController, AddCourseDelegate, CourseEditorDelegate{
     var courses = [CourseModel]()
     
     
@@ -38,13 +38,22 @@ class ScheduleController: UITableViewController, AddCourseDelegate{
     }
     
     @IBAction func addClicked(_ sender: Any){
-        performSegue(withIdentifier: "AddCourseFromSchedule", sender: self)
+        if SharedData.getUser()!.isStudent(){
+            performSegue(withIdentifier: "AddCourseFromSchedule", sender: self)
+        }
+        else{
+            performSegue(withIdentifier: "CourseEditorFromSchedule", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "AddCourseFromSchedule"{
             let addCourseController = segue.destination as! AddCourseController
             addCourseController.delegate = self
+        }
+        else if segue.identifier == "CourseEditorFromSchedule"{
+            let courseEditorController = segue.destination as! CourseEditorController
+            courseEditorController.delegate = self
         }
         else if segue.identifier == "CourseFromSchedule"{
             let courseController = segue.destination as! CourseController
@@ -54,6 +63,11 @@ class ScheduleController: UITableViewController, AddCourseDelegate{
     }
     
     func onCourseAdded(course: CourseModel){
+        courses.append(course)
+        tableView.reloadData()
+    }
+    
+    func onCourseSaved(_ course: CourseModel){
         courses.append(course)
         tableView.reloadData()
     }

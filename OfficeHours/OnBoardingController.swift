@@ -31,14 +31,14 @@ class OnBoardingController: UIViewController{
     override func viewDidLoad(){
         super.viewDidLoad()
         
-        firstName.layer.borderColor = UIColor.red.cgColor;
-        firstName.layer.cornerRadius = 4;
+        firstName.layer.borderColor = UIColor.red.cgColor
+        firstName.layer.cornerRadius = 4
         
-        lastName.layer.borderColor = UIColor.red.cgColor;
-        lastName.layer.cornerRadius = 4;
+        lastName.layer.borderColor = UIColor.red.cgColor
+        lastName.layer.cornerRadius = 4
         
-        schoolEmailAddress.layer.borderColor = UIColor.red.cgColor;
-        schoolEmailAddress.layer.cornerRadius = 4;
+        schoolEmailAddress.layer.borderColor = UIColor.red.cgColor
+        schoolEmailAddress.layer.cornerRadius = 4
         
         user = SharedData.getUser()!
         firstName.text = user.getFirstName()
@@ -116,9 +116,9 @@ class OnBoardingController: UIViewController{
         var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         keyboardFrame = self.view.convert(keyboardFrame, from: nil)
         
-        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        var contentInset:UIEdgeInsets = scrollView.contentInset
         contentInset.bottom = keyboardFrame.size.height
-        self.scrollView.contentInset = contentInset
+        scrollView.contentInset = contentInset
     }
     
     func keyboardWillHide(notification: NSNotification){
