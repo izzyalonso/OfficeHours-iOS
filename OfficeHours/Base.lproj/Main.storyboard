@@ -517,7 +517,10 @@
                                                 <rect key="frame" x="16" y="80" width="343" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="N0s-Wn-qgM" id="7Nz-OB-BnF"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pW2-Ri-0bI">
                                                 <rect key="frame" x="16" y="126" width="343" height="18"/>
@@ -529,7 +532,10 @@
                                                 <rect key="frame" x="16" y="152" width="343" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="N0s-Wn-qgM" id="fee-vl-ctO"/>
+                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41j-Hx-rrA">
                                                 <rect key="frame" x="16" y="198" width="343" height="55"/>
@@ -616,6 +622,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfL-Ne-OzM">
                                                 <rect key="frame" x="322" y="332" width="37" height="30"/>
                                                 <state key="normal" title="Done"/>
+                                                <connections>
+                                                    <action selector="onDoneTapped" destination="N0s-Wn-qgM" eventType="touchUpInside" id="tqv-0J-KTX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -665,8 +674,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="code" destination="nKp-IV-0Ow" id="Bdr-dC-HDs"/>
                         <outlet property="lastMeetingDateLabel" destination="Nxc-DF-6dj" id="zRO-8e-9sm"/>
                         <outlet property="meetingTimeLabel" destination="4Mm-8k-tXJ" id="ElF-cl-B0y"/>
+                        <outlet property="name" destination="GC0-St-6tO" id="8MU-dr-f3G"/>
+                        <outlet property="scrollView" destination="Kqs-CJ-M46" id="ExQ-Du-9Hb"/>
                         <segue destination="LkJ-6j-PWB" kind="show" identifier="DatePickerFromCourseEditor" id="f8x-Jh-nnj"/>
                         <segue destination="O2i-1s-bRM" kind="show" identifier="TimeSlotPickerFromCourseEditor" id="L0V-jQ-tdM"/>
                     </connections>

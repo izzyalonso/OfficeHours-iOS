@@ -94,7 +94,7 @@ class TimeSlotPickerController: UIViewController, TimePickerDelegate{
         if !result.isEmpty && fromDate != nil && toDate != nil{
             let fromStr = timeFormatter.string(for: fromDate!)!
             let toStr = timeFormatter.string(for: toDate!)!
-            result += " \(fromStr) - \(toStr)"
+            result += " \(fromStr)-\(toStr)"
             
             delegate.onTimeSlotPicked(result)
             navigationController!.popViewController(animated: true)

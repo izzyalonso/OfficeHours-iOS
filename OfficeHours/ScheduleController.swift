@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ScheduleController: UITableViewController, AddCourseDelegate{
+class ScheduleController: UITableViewController, AddCourseDelegate, CourseEditorDelegate{
     var courses = [CourseModel]()
     
     
@@ -51,6 +51,10 @@ class ScheduleController: UITableViewController, AddCourseDelegate{
             let addCourseController = segue.destination as! AddCourseController
             addCourseController.delegate = self
         }
+        else if segue.identifier == "CourseEditorFromSchedule"{
+            let courseEditorController = segue.destination as! CourseEditorController
+            courseEditorController.delegate = self
+        }
         else if segue.identifier == "CourseFromSchedule"{
             let courseController = segue.destination as! CourseController
             let indexPath = tableView.indexPath(for: sender as! CourseCell)
@@ -59,6 +63,11 @@ class ScheduleController: UITableViewController, AddCourseDelegate{
     }
     
     func onCourseAdded(course: CourseModel){
+        courses.append(course)
+        tableView.reloadData()
+    }
+    
+    func onCourseSaved(_ course: CourseModel){
         courses.append(course)
         tableView.reloadData()
     }
