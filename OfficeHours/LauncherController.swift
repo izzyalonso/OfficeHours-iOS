@@ -7,12 +7,14 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth
 import GoogleSignIn
+
+import Just
+import ObjectMapper
 
 
 class LauncherController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
+    
     @IBOutlet weak var googleSignInButton: GIDSignInButton!
     
     
@@ -24,11 +26,13 @@ class LauncherController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
         googleSignInButton.colorScheme = .dark
         googleSignInButton.style = .standard
         
-        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+        print("I am getting here")
+        
+        GIDSignIn.sharedInstance().clientID = "152170900684-nvq12vbfasvbta3h90rd4o30ditbms2c.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         
-        let user = User.readFromDefaults()
+        /*let user = User.readFromDefaults()
         if let user = user{
             SharedData.setUser(user)
             if user.needsOnBoarding(){
@@ -37,7 +41,7 @@ class LauncherController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
             else{
                 transitionToSchedule()
             }
-        }
+        }*/
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?){
@@ -46,22 +50,27 @@ class LauncherController: UIViewController, GIDSignInDelegate, GIDSignInUIDelega
             return
         }
         
-        guard let authentication = user.authentication else { return }
-        let credential = FIRGoogleAuthProvider.credential(
-            withIDToken: authentication.idToken,
-            accessToken: authentication.accessToken
-        )
-        
-        FIRAuth.auth()?.signIn(with: credential){ (user, error) in
-            
+        print(API.BODY.signIn(user: user))
+        Just.post(API.URL.signIn(), json: API.BODY.signIn(user: user)){ (response) in
+            print(response.statusCode ?? "No status code")
+            if response.ok{
+                let user = User(JSONString: response.contentStr)!
+                print(user)
+            }
+            else{
+                print(response.content ?? "No content");
+                print(response.contentStr);
+                print("request failed")
+                print(response.error ?? "No error")
+            }
         }
         
         // Perform any operations on signed in user here.
-        let ooUser = User(user: user)
-        ooUser.writeToDefaults()
-        SharedData.setUser(ooUser)
+        //let ooUser = User(user: user)
+        //ooUser.writeToDefaults()
+        //SharedData.setUser(ooUser)
         
-        transitionToOnBoarding()
+        ///transitionToOnBoarding()
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user:GIDGoogleUser!, withError error: Error!){

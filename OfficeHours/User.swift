@@ -6,17 +6,17 @@
 //  Copyright © 2016 Tennessee Data Commons. All rights reserved.
 //
 
-//import Foundation
+import ObjectMapper
 
 
-class User{
+class User: Base, CustomStringConvertible{
     private static let student = "Student"
     private static let instructor = "Instructor"
     
     
     //Things google give me
+    private var photoUrl: String = ""
     private var email: String = ""
-    private var googleToken: String = ""
     
     //Fields set during on boarding. Some of these are pre populated
     private var accountType: String? = nil
@@ -25,20 +25,11 @@ class User{
     private var lastName: String = ""
     private var schoolEmail: String = ""
     private var phoneNumber: String = ""
-    private var isOnBoardingComplete: Bool = false
+    private var needsOnBoardingInternal: Bool = false
     
     //Fields retrieved from the backend
+    private var profileId: Int = 0;
     private var token: String = ""
-    
-    
-    init(user: GIDGoogleUser){
-        email = user.profile.email
-        googleToken = user.authentication.idToken
-        
-        firstName = user.profile.givenName
-        lastName = user.profile.familyName
-        schoolEmail = email
-    }
     
     
     func setAsStudent(){
@@ -63,16 +54,12 @@ class User{
     }
     
     func setOnBoardingComplete(){
-        isOnBoardingComplete = true
+        needsOnBoardingInternal = false
     }
     
     
     func getEmail() -> String{
         return email
-    }
-    
-    func getGoogleToken() -> String{
-        return googleToken
     }
     
     func isAccountTypeSet() -> Bool{
@@ -108,20 +95,21 @@ class User{
     }
     
     func needsOnBoarding() -> Bool{
-        return !isOnBoardingComplete
+        return needsOnBoardingInternal
     }
     
     
     func writeToDefaults(){
         let defaults = UserDefaults.standard
+        defaults.set(getId(), forKey: "user.id")
+        defaults.set(profileId, forKey: "user.profileId")
         defaults.set(email, forKey: "user.email")
-        defaults.set(googleToken, forKey: "user.googleToken")
         defaults.set(accountType, forKey: "user.accountType")
         defaults.set(firstName, forKey: "user.firstName")
         defaults.set(lastName, forKey: "user.lastName")
         defaults.set(schoolEmail, forKey: "user.schoolEmail")
         defaults.set(phoneNumber, forKey: "user.phoneNumber")
-        defaults.set(isOnBoardingComplete, forKey: "user.isOnBoardingComplete")
+        defaults.set(needsOnBoardingInternal, forKey: "user.needsOnBoarding")
         defaults.set(token, forKey: "user.token")
     }
     
@@ -138,14 +126,41 @@ class User{
     }
     
     private init(_ defaults: UserDefaults){
+        super.init(id: defaults.object(forKey: "user.id") as! Int)
+        profileId = defaults.object(forKey: "user.profileId") as! Int
         email = defaults.object(forKey: "user.email") as! String
-        googleToken = defaults.object(forKey: "user.googleToken") as! String
         accountType = defaults.object(forKey: "user.accountType") as? String
         firstName = defaults.object(forKey: "user.firstName") as! String
         lastName = defaults.object(forKey: "user.lastName") as! String
         schoolEmail = defaults.object(forKey: "user.schoolEmail") as! String
         phoneNumber = defaults.object(forKey: "user.phoneNumber") as! String
-        isOnBoardingComplete = defaults.bool(forKey: "user.isOnBoardingComplete")
+        needsOnBoardingInternal = defaults.bool(forKey: "user.needsOnBoarding")
         token = defaults.object(forKey: "user.token") as! String
+    }
+    
+    required init?(map: Map){
+        super.init(map: map)
+    }
+    
+    override func mapping(map: Map){
+        super.mapping(map: map)
+        profileId <- map["profile_id"]
+        email <- map["email"]
+        firstName <- map["first_name"]
+        lastName <- map["last_name"]
+        photoUrl <- map["google_image"]
+        phoneNumber <- map["phone"]
+        needsOnBoardingInternal <- map["needs_onboarding"]
+        token <- map["token"]
+    }
+    
+    func getHeaderMap() -> [String: String]{
+        return ["Authorization": "Token \(token)"];
+    }
+    
+    var description: String{
+        let idSec = "(uid: \(getId()), pid: \(profileId))"
+        let onBoardingSec = "\(needsOnBoardingInternal ? "needs" : "doesn't need") on-boarding"
+        return "\(firstName) \(lastName) \(idSec), \(email), \(onBoardingSec)"
     }
 }

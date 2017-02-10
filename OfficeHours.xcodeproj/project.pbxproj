@@ -26,6 +26,9 @@
 		5481F7201E0AD43500171170 /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481F71F1E0AD43500171170 /* DatePickerController.swift */; };
 		5481F7221E0BC39D00171170 /* TimePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481F7211E0BC39D00171170 /* TimePickerController.swift */; };
 		5481F7241E0BC4B500171170 /* TimeSlotPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5481F7231E0BC4B500171170 /* TimeSlotPickerController.swift */; };
+		54ACF8451E4BCCAD0049F8CD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACF8441E4BCCAD0049F8CD /* API.swift */; };
+		54ACF8471E4D0CF50049F8CD /* HttpResultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACF8461E4D0CF50049F8CD /* HttpResultExtension.swift */; };
+		54ACF8491E4D13DA0049F8CD /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACF8481E4D13DA0049F8CD /* Base.swift */; };
 		54CBE3691E0952FE009A3875 /* OnBoardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBE3681E0952FE009A3875 /* OnBoardingController.swift */; };
 		54CBE36B1E09552A009A3875 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBE36A1E09552A009A3875 /* SharedData.swift */; };
 		54CBE36E1E095F39009A3875 /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBE36D1E095F39009A3875 /* NSLayoutConstraintExtension.swift */; };
@@ -81,6 +84,9 @@
 		5481F71F1E0AD43500171170 /* DatePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerController.swift; sourceTree = "<group>"; };
 		5481F7211E0BC39D00171170 /* TimePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerController.swift; sourceTree = "<group>"; };
 		5481F7231E0BC4B500171170 /* TimeSlotPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSlotPickerController.swift; sourceTree = "<group>"; };
+		54ACF8441E4BCCAD0049F8CD /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		54ACF8461E4D0CF50049F8CD /* HttpResultExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpResultExtension.swift; sourceTree = "<group>"; };
+		54ACF8481E4D13DA0049F8CD /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		54CBE3651E07DE28009A3875 /* OfficeHours-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OfficeHours-Bridging-Header.h"; sourceTree = "<group>"; };
 		54CBE3681E0952FE009A3875 /* OnBoardingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingController.swift; sourceTree = "<group>"; };
 		54CBE36A1E09552A009A3875 /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 		5474E1761DF9DED20067AF3C /* src */ = {
 			isa = PBXGroup;
 			children = (
+				54ACF8431E4BCC950049F8CD /* util */,
 				5474E17B1DFA14FE0067AF3C /* cell */,
 				5474E17A1DFA14A30067AF3C /* controller */,
 				54CBE36C1E095ED6009A3875 /* extension */,
@@ -203,6 +210,7 @@
 				5474E1781DF9DF070067AF3C /* User.swift */,
 				5474E1741DF8D10F0067AF3C /* CourseModel.swift */,
 				54CBE36A1E09552A009A3875 /* SharedData.swift */,
+				54ACF8481E4D13DA0049F8CD /* Base.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -231,10 +239,19 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		54ACF8431E4BCC950049F8CD /* util */ = {
+			isa = PBXGroup;
+			children = (
+				54ACF8441E4BCCAD0049F8CD /* API.swift */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
 		54CBE36C1E095ED6009A3875 /* extension */ = {
 			isa = PBXGroup;
 			children = (
 				54CBE36D1E095F39009A3875 /* NSLayoutConstraintExtension.swift */,
+				54ACF8461E4D0CF50049F8CD /* HttpResultExtension.swift */,
 			);
 			name = extension;
 			sourceTree = "<group>";
@@ -305,6 +322,7 @@
 				54525B241DF5EE37000FF036 /* Frameworks */,
 				54525B251DF5EE37000FF036 /* Resources */,
 				FAC7C8F52C7FBDD17EC0F67D /* [CP] Copy Pods Resources */,
+				78CCC093E32D06135D591131 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -440,6 +458,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfficeHoursTests/Pods-OfficeHoursTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		78CCC093E32D06135D591131 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfficeHoursUITests/Pods-OfficeHoursUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		839D87667B7ED7935AD73125 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,7 +485,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		895A309C96F06E16331ABF5D /* [CP] Check Pods Manifest.lock */ = {
@@ -467,7 +500,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B1D8F4F379D5752A801ED9B3 /* [CP] Check Pods Manifest.lock */ = {
@@ -482,7 +515,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F11A9433FF7F1AB75E8249AE /* [CP] Copy Pods Resources */ = {
@@ -531,12 +564,15 @@
 				54525B111DF5EE37000FF036 /* OfficeHours.xcdatamodeld in Sources */,
 				5481F7221E0BC39D00171170 /* TimePickerController.swift in Sources */,
 				5481F7241E0BC4B500171170 /* TimeSlotPickerController.swift in Sources */,
+				54ACF8491E4D13DA0049F8CD /* Base.swift in Sources */,
 				5474E1731DF8D0BD0067AF3C /* CourseCell.swift in Sources */,
 				54CBE36E1E095F39009A3875 /* NSLayoutConstraintExtension.swift in Sources */,
 				54CBE36B1E09552A009A3875 /* SharedData.swift in Sources */,
 				5474E1791DF9DF070067AF3C /* User.swift in Sources */,
 				5481F7201E0AD43500171170 /* DatePickerController.swift in Sources */,
 				54CBE3691E0952FE009A3875 /* OnBoardingController.swift in Sources */,
+				54ACF8451E4BCCAD0049F8CD /* API.swift in Sources */,
+				54ACF8471E4D0CF50049F8CD /* HttpResultExtension.swift in Sources */,
 				5455C2FD1DFF4BF100C4092C /* CourseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

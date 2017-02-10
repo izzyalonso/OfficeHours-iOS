@@ -6,9 +6,10 @@ target 'OfficeHours' do
   use_frameworks!
 
   # Pods for OfficeHours
-  pod 'Firebase/Core'
-  pod 'Firebase/Auth’
   pod ‘GoogleSignIn’
+  
+  pod 'Just'
+  pod 'ObjectMapper'
 
   target 'OfficeHoursTests' do
     inherit! :search_paths
