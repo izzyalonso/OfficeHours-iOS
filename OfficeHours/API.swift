@@ -30,6 +30,14 @@ class API{
        class func signIn() -> String{
             return "\(apiUrl)users/oauth/"
         }
+        
+        class func chatHistory(user1: Int, user2: Int, before timestamp: String) -> String{
+            let first = user1 < user2 ? user1 : user2
+            let second = user1 > user2 ? user1 : user2
+            let room = "room=chat-\(first)-\(second)"
+            let time = "before=\(timestamp.replacingOccurrences(of: " ", with: "%20"))"
+            return "\(apiUrl)chat/history/?\(room)&\(time)"
+        }
     }
     
     

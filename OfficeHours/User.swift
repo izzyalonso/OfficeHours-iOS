@@ -32,6 +32,13 @@ class User: Base, CustomStringConvertible{
     private var token: String = ""
     
     
+    init(){
+        super.init(id: 121)
+        
+        token = ""
+    }
+    
+    
     func setAsStudent(){
         accountType = User.student
     }

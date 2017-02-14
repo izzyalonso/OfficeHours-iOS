@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5447B15B1E5263960024ECD4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5447B15A1E5263960024ECD4 /* Message.swift */; };
+		5447B15D1E52A6D20024ECD4 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5447B15C1E52A6D20024ECD4 /* MessageCell.swift */; };
 		54525B091DF5EE37000FF036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B081DF5EE37000FF036 /* AppDelegate.swift */; };
 		54525B0B1DF5EE37000FF036 /* LauncherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54525B0A1DF5EE37000FF036 /* LauncherController.swift */; };
 		54525B0E1DF5EE37000FF036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54525B0C1DF5EE37000FF036 /* Main.storyboard */; };
@@ -29,6 +31,7 @@
 		54ACF8451E4BCCAD0049F8CD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACF8441E4BCCAD0049F8CD /* API.swift */; };
 		54ACF8471E4D0CF50049F8CD /* HttpResultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACF8461E4D0CF50049F8CD /* HttpResultExtension.swift */; };
 		54ACF8491E4D13DA0049F8CD /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACF8481E4D13DA0049F8CD /* Base.swift */; };
+		54C6C7241E525B3300BC472B /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6C7231E525B3300BC472B /* ChatController.swift */; };
 		54CBE3691E0952FE009A3875 /* OnBoardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBE3681E0952FE009A3875 /* OnBoardingController.swift */; };
 		54CBE36B1E09552A009A3875 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBE36A1E09552A009A3875 /* SharedData.swift */; };
 		54CBE36E1E095F39009A3875 /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBE36D1E095F39009A3875 /* NSLayoutConstraintExtension.swift */; };
@@ -59,6 +62,8 @@
 		1A58E04026A28DF63DB82158 /* Pods_OfficeHoursTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfficeHoursTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CDFB7DA0DF63FCBE8183016 /* Pods_OfficeHours.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfficeHours.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C30BD46C8ABCB158B79671D /* Pods-OfficeHoursUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficeHoursUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OfficeHoursUITests/Pods-OfficeHoursUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5447B15A1E5263960024ECD4 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		5447B15C1E52A6D20024ECD4 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		54525B051DF5EE37000FF036 /* OfficeHours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfficeHours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54525B081DF5EE37000FF036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54525B0A1DF5EE37000FF036 /* LauncherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherController.swift; sourceTree = "<group>"; };
@@ -87,6 +92,7 @@
 		54ACF8441E4BCCAD0049F8CD /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		54ACF8461E4D0CF50049F8CD /* HttpResultExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpResultExtension.swift; sourceTree = "<group>"; };
 		54ACF8481E4D13DA0049F8CD /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		54C6C7231E525B3300BC472B /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		54CBE3651E07DE28009A3875 /* OfficeHours-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OfficeHours-Bridging-Header.h"; sourceTree = "<group>"; };
 		54CBE3681E0952FE009A3875 /* OnBoardingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingController.swift; sourceTree = "<group>"; };
 		54CBE36A1E09552A009A3875 /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
@@ -211,6 +217,7 @@
 				5474E1741DF8D10F0067AF3C /* CourseModel.swift */,
 				54CBE36A1E09552A009A3875 /* SharedData.swift */,
 				54ACF8481E4D13DA0049F8CD /* Base.swift */,
+				5447B15A1E5263960024ECD4 /* Message.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -227,6 +234,7 @@
 				5481F71F1E0AD43500171170 /* DatePickerController.swift */,
 				5481F7211E0BC39D00171170 /* TimePickerController.swift */,
 				5481F7231E0BC4B500171170 /* TimeSlotPickerController.swift */,
+				54C6C7231E525B3300BC472B /* ChatController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				5474E1721DF8D0BD0067AF3C /* CourseCell.swift */,
+				5447B15C1E52A6D20024ECD4 /* MessageCell.swift */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -558,12 +567,15 @@
 				5474E1751DF8D10F0067AF3C /* CourseModel.swift in Sources */,
 				5474E1711DF8B93D0067AF3C /* ScheduleController.swift in Sources */,
 				5474E17D1DFA15290067AF3C /* AddCourseController.swift in Sources */,
+				54C6C7241E525B3300BC472B /* ChatController.swift in Sources */,
 				54525B0B1DF5EE37000FF036 /* LauncherController.swift in Sources */,
 				54525B091DF5EE37000FF036 /* AppDelegate.swift in Sources */,
+				5447B15B1E5263960024ECD4 /* Message.swift in Sources */,
 				5481F71E1E0AD35700171170 /* CourseEditorController.swift in Sources */,
 				54525B111DF5EE37000FF036 /* OfficeHours.xcdatamodeld in Sources */,
 				5481F7221E0BC39D00171170 /* TimePickerController.swift in Sources */,
 				5481F7241E0BC4B500171170 /* TimeSlotPickerController.swift in Sources */,
+				5447B15D1E52A6D20024ECD4 /* MessageCell.swift in Sources */,
 				54ACF8491E4D13DA0049F8CD /* Base.swift in Sources */,
 				5474E1731DF8D0BD0067AF3C /* CourseCell.swift in Sources */,
 				54CBE36E1E095F39009A3875 /* NSLayoutConstraintExtension.swift in Sources */,

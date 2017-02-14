@@ -37,7 +37,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JK-MH-1E2">
-                                <rect key="frame" x="170.5" y="617" width="33" height="30"/>
+                                <rect key="frame" x="171" y="617" width="33" height="30"/>
                                 <state key="normal" title="Chat"/>
                                 <connections>
                                     <segue destination="pF8-bA-jBs" kind="show" id="9kE-4A-5eH"/>
@@ -333,7 +333,7 @@
         <!--Chat-->
         <scene sceneID="Yz8-7y-trR">
             <objects>
-                <viewController title="Chat" automaticallyAdjustsScrollViewInsets="NO" id="pF8-bA-jBs" sceneMemberID="viewController">
+                <viewController title="Chat" automaticallyAdjustsScrollViewInsets="NO" id="pF8-bA-jBs" customClass="ChatController" customModule="OfficeHours" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uPM-Ht-daa"/>
                         <viewControllerLayoutGuide type="bottom" id="hoW-uX-dI8"/>
@@ -375,7 +375,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="557"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="24e-oc-FTI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="83" id="24e-oc-FTI" customClass="MessageCell" customModule="OfficeHours" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="24e-oc-FTI" id="6kP-Uw-iaS">
@@ -402,7 +402,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timestamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBm-H5-4id">
-                                                                    <rect key="frame" x="228.5" y="0.0" width="85.5" height="21"/>
+                                                                    <rect key="frame" x="228" y="0.0" width="86" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -438,8 +438,16 @@
                                                 <constraint firstItem="sfJ-j6-Vzc" firstAttribute="top" secondItem="6kP-Uw-iaS" secondAttribute="topMargin" id="ZcX-5O-I7M"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="message" destination="TyC-Zb-4pI" id="2tg-L1-b18"/>
+                                            <outlet property="state" destination="jHw-ds-dHR" id="gGf-aq-eAx"/>
+                                            <outlet property="timestamp" destination="UBm-H5-4id" id="xUR-Ts-ik5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pF8-bA-jBs" id="sgY-iG-TN4"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -453,6 +461,9 @@
                             <constraint firstItem="YaR-Oj-yG0" firstAttribute="top" secondItem="jgD-T1-CCQ" secondAttribute="bottom" id="zxz-mp-YMZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="jgD-T1-CCQ" id="5ex-t7-wpG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35j-IW-Slt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
